@@ -9,6 +9,8 @@ import { apiUrl } from '../config'
 import { login } from '../util/login'
 import browserCookies from 'browser-cookies'
 
+console.log('apiUrl', apiUrl);
+
 export let instance = axios.create({
   withCredentials: true,
   baseURL: apiUrl,
