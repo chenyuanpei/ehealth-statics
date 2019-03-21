@@ -1,6 +1,6 @@
 export default {
-  hostname: 'lifejoy-health.booen.co',
-  apiUrl: '//lifejoy-health.booen.co',
+  hostname: 'cdn.lifesense.com',
+  apiUrl: '//health.lifesense.com',
   im: {
     sdkAppId: 1400014768,
     accountType: 7487,
