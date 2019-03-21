@@ -1,0 +1,119 @@
+rem(a)
+    a / (750/640*50)rem
+.ranking-layout
+    margin-top rem(40)
+    padding-bottom rem(20)
+    .ranking-mod
+        margin 0 rem(10) rem(20)
+        background #FFF
+        border-radius rem(8)
+        padding rem(30) 0
+        overflow hidden
+        .title
+            font-size rem(24)
+            color #666
+            text-align center
+            margin 0 rem(30) 0
+            padding-bottom rem(30)
+            border-bottom 1px solid #D9D9D9
+    .my-ranking
+        .data
+            padding rem(40) 0 rem(10)
+        .no-data
+            text-align center
+            font-size rem(28)
+            color #414141
+        .has-data
+            margin 0 rem(30)
+            line-height rem(100)
+            overflow hidden
+            font-size rem(32)
+            .left
+                float left
+            .right
+                float right
+            .head
+                width rem(100)
+                height rem(100)
+                margin 0 rem(30)
+                border-radius 50%
+            .other
+                line-height rem(50)
+                font-size rem(26)
+    .all-ranking
+        padding-bottom 0
+        .item
+            margin 0 rem(30)
+            padding rem(30) 0
+            border-bottom 1px solid #D9D9D9
+            line-height rem(100)
+            height rem(100)
+            font-size rem(32)
+            .left
+                float left
+            .right
+                float right
+            .num
+                width rem(32)
+                font-size rem(50)
+                color #A5A5A5
+                font-family HelveticaNeue
+                font-weight bold
+                font-style italic
+            .head
+                width rem(100)
+                height rem(100)
+                margin 0 rem(30)
+                border-radius 50%
+        .item1
+            .num
+                font-size rem(0)
+                background url("../../../static/images/weight/img-first.png") no-repeat 0 0 / 100%
+                position relative
+                top rem(8)
+        .item2
+            .num
+                font-size rem(32)
+        .item:last-child
+            border-bottom none
+    .ranking-loading
+        text-align center
+        padding .3rem 0
+        .con
+            font-size rem(28)
+            color #FFF
+            padding-left rem(60)
+            line-height rem(40)
+            display inline-block
+            position relative
+        .icon
+            position absolute
+            left 0
+            top 0
+            width rem(40)
+            height rem(40)
+            background url("../../../static/images/weight/img-loading.png") no-repeat 0 0 / 100%
+            animation circle 1s infinite linear
+            -webkit-animation:circle 1s infinite linear
+            -ms-animation:circle 1s infinite linear
+            -moz-animation:circle 1s infinite linear
+.m-weight-report-wrap .m-public-device-bottom .m-public-device-info
+    margin-top 0
+    background transparent
+    .m-organization-img
+        padding-top 0
+@keyframes circle
+    0%
+        transform rotate(0deg)
+    100%
+        transform rotate(-360deg)
+@-webkit-keyframes circle
+    0%
+        transform rotate(0deg)
+    100%
+        transform rotate(-360deg)
+@-moz-keyframes circle
+    0%
+        transform rotate(0deg)
+    100%
+        transform rotate(-360deg)

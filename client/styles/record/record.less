@@ -1,0 +1,108 @@
+@import "../base/base";
+.m-heart-rate-icon{
+  .width(28);
+  .height(16);
+  vertical-align: middle;
+  .marginTop(-5);
+  .marginLeft(10);
+}
+.m-heart-icon{
+  .width(35);
+  .height(20);
+  vertical-align: middle;
+  .marginTop(-10);
+  .marginLeft(10);
+}
+.record-no_data {
+  color: @recordNoDataColor !important;
+}
+
+.record-normal {
+  color: @recordNormalColor !important;
+}
+
+.record-light {
+  color: @recordLightColor !important;
+}
+.record-highest{
+  color: @recordHighColor !important;
+  .marginTop(-18);
+}
+.record-height {
+  color: @recordHighColor !important;
+}
+
+.record-normal_height {
+  color: @recordLowerColor !important;
+}
+
+.record-low {
+  color: @recordLightColor !important;
+}
+
+.record-medium {
+  color: @recordHighColor !important;
+}
+
+.icon_record {
+  .width(56);
+  .height(56);
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+.m-bp-top-chart-tips{
+  position:absolute;
+  .width(230);
+  .height(20);
+  left:50%;
+  .marginLeft(-85);
+  .bottom(338);
+  color:#fff;
+  .fontSize(24);
+  .first_round{
+    display: inline-block;
+    .width(12);
+    .height(12);
+    border:2px solid #fff;
+    .borderRadius(12);
+    background:#09C199;
+    .marginRight(10);
+  }
+  .second_round{
+    display: inline-block;
+    .width(12);
+    .height(12);
+    border:2px solid rgba(255,255,255,0.5);
+    .borderRadius(12);
+    .marginLeft(20);
+    .marginRight(10);
+    .second_round_in{
+      .width(12);
+      .height(12);
+      .borderRadius(12);
+      background: #fff;
+    }
+  }
+
+}
+
+//血压图标
+.icon_blood_no_data {
+  background-image: url(../../../static/images/record/icon_blood_no_data.png);
+}
+
+.icon_blood_normal {
+  background-image: url(../../../static/images/record/icon_blood_normal.png);
+}
+
+.icon_blood_light {
+  background-image: url(../../../static/images/record/icon_blood_light.png);
+}
+
+.icon_blood_high {
+  background-image: url(../../../static/images/record/icon_blood_high.png);
+}
+
+

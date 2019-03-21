@@ -1,0 +1,42 @@
+@import "../base/base";
+.phoneBox{
+  width: 100%;
+  height: 100%;
+  .weui_cells_title{
+    .marginTop(11);.marginBottom(11);
+    color:#A5A5A5;
+    .fontSize(24);
+  }
+  div {
+    &:only-child{
+      .marginTop(10);
+    }
+  }
+  .weui_cells{
+    .marginTop(0);
+    .fontSize(28);
+    &:before{
+      border-top:none;
+    }
+    &:last-child:after{
+      border-bottom:none;
+    }
+    .weui_cell{
+      .displayFlex();
+      .flexFlow(row nowrap);
+      .justifyContent(space-between);
+    }
+  }
+  .weui_cells{
+    .weui_btn_primary,.weui_btn_default{
+      background-color: #00d5bf;
+      .fontSize(28);
+      .width(220);
+      .height(60);
+    }
+    .weui_btn_default{
+      background-color: #a5a5a5;
+      color:#fff;
+    }
+  }
+}

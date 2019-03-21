@@ -1,0 +1,42 @@
+@import "../base/base";
+
+#homePage .addMemberBox {
+
+  box-sizing: border-box;
+  .paddingTop(20);
+  .paddingLeft(10);
+  .paddingRight(10);
+
+  .addMemberCard {
+    box-sizing: border-box;
+    .borderRadius(10);
+    border: 1px solid @globalBorderColor;
+    .paddingTop(50);
+    .height(230);
+    width: 100%;
+    background-color: #FFFFFF;
+
+    .addMemberBtn {
+      .transformCenter();
+      .height(100);
+      .width(100);
+      border-radius: 50%;
+      background-image: url(../../../static/images/btn_add.png);
+      background-size: 100% 100%;
+    }
+
+    .addMemberBtnText {
+      .paddingTop(12);
+      .fontSize(20);
+      text-align: center;
+      color: #676767;
+    }
+  }
+
+  .addMemberInfo {
+    .paddingTop(12);
+    text-align: center;
+    .fontSize(20);
+    color: #93929A;
+  }
+}

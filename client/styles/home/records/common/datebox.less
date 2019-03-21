@@ -1,0 +1,37 @@
+@import "../../../base/base";
+
+.trend_date {
+  text-align: center;
+  .lineHeight(86);
+  .fontSize(28);
+  color: #ffffff;
+
+  span, label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  > label {
+    .fontSize(28);
+    .width(350);
+    color: #ffffff;
+  }
+
+  > span {
+    .width(38);
+    .height(38);
+    background-size: 100% 100%;
+
+    &:first-child {
+      background-image: url(../../../../../static/images/btn_used_n.png);
+    }
+  }
+
+  .img_n{
+    background-image: url(../../../../../static/images/btn_new_n.png);
+  }
+  .img_p {
+    pointer-events: none !important;
+    background-image: url(../../../../../static/images/btn_new_p.png);
+  }
+}

@@ -1,0 +1,162 @@
+rem(a)
+  (a / (750/640*50))rem
+
+rem2(a)
+  ((a*32) / (750/640*50))rem
+
+rem3(a)
+  (a / 50)rem
+
+
+.sleep-page
+  background:#ffffff;
+  .m-device-bind-tips
+    height rem(80)
+    line-height rem(80)
+    padding-left rem(20)
+    background #6abfff
+    color #fff
+    font-size rem(28)
+  .m-close
+    color #fff
+    font-size rem(66)
+    position absolute
+    right rem(15)
+    top rem(-4)
+    z-index 40
+    transform rotate(45deg)
+    -ms-transform rotate(45deg) 	/* IE 9 */
+    -moz-transform rotate(45deg) 	/* Firefox */
+    -webkit-transform rotate(45deg) /* Safari 和 Chrome */
+    -o-transform rotate(45deg)  	/* Opera */
+  .mark-samples
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    -webkit-box-sizing border-box
+    list-style none
+    padding 0 rem2(5.75)
+    font-size rem(24)
+    li
+      flex 1
+      -webkit-flex 1
+      display -webkit-box
+      display -moz-box
+      display -ms-flexbox
+      display -webkit-flex
+      display flex
+      -webkit-box-sizing border-box
+      align-items center
+      justify-content center
+      -webkit-justify-content center
+      &:last-child
+        justify-content flex-end
+        -webkit-justify-content flex-end
+      &:first-child
+        justify-content flex-start
+        -webkit-justify-content flex-start
+    .color-mark
+      display -webkit-box
+      display -moz-box
+      display -ms-flexbox
+      display -webkit-flex
+      display flex
+      -webkit-box-sizing border-box
+      width rem3(20)
+      height rem3(20)
+      border rem3(1) solid #c0c0c0
+      border-radius 1px
+      margin-right rem2(0.31)
+
+  .chart
+    padding rem2(0.5) rem(65) 0 rem(65)
+
+    position relative
+    .labels
+      padding rem3(26) 0
+      display -webkit-box
+      display -moz-box
+      display -ms-flexbox
+      display -webkit-flex
+      display flex
+      justify-content center
+      -webkit-justify-content center
+      align-items center
+      font-size rem2(0.75)
+      margin 0 rem(-37)
+      //color #999999
+      p
+        flex 1
+        -webkit-flex 1
+        &:last-child
+          text-align right
+        &:first-child
+          justify-content left
+          -webkit-justify-content left
+
+  .no-data-tip
+
+    position absolute
+    top 0
+    left 0
+    height 100%
+    width 100%
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    justify-content center
+    -webkit-justify-content center
+    align-items center
+    font-size rem2(1)
+    opacity 0.6
+  //color #999999
+  .bg
+    background #5b479f
+    color white
+    min-height rem(500)
+    .title
+      font-size rem2(1)
+      padding-top rem2(1.25)
+      padding-bottom rem2(0.625)
+      position relative
+      text-align center
+      background #5b479f
+      color white
+  svg
+    position relative
+    z-index 101
+
+  .mark-line
+    position absolute
+    width 0
+    //background #fff
+    height 50%
+    margin auto
+    top rem2(0.6)
+    border-right 1px dashed white
+  .label-text
+    position absolute
+    width rem2(5.625)
+    height rem2(1.125)
+    background #ffffff
+    color #6449bf
+    border-radius 3px
+
+    left 0
+    top  rem2(0.6)
+    font-size rem2(0.75)
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    justify-content center
+    -webkit-justify-content center
+    align-items center
+    transform translateX(-50%)
+    -webkit-transform translateX(-50%)
+

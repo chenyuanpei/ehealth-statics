@@ -1,0 +1,109 @@
+@import "../../../base/base";
+
+.trend_body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  .m-month-bottom-text{
+    position: absolute;
+    width:100%;
+    .bottom(24);
+    color:#fff;
+    .fontSize(24);
+    text-align: center;
+    .m-first-day{
+      position:absolute;
+      .left(55);
+      .width(60);
+      .bottom(0);
+    }
+    .m-last-day{
+      position: absolute;
+      .right(30);
+      .width(60);
+      .bottom(0);
+    }
+    .m-mid-day{
+      position: absolute;
+      left:50%;
+      .width(60);
+      .marginLeft(-25);
+      bottom:0;
+    }
+  }
+  .trend_top {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .trend_chart {
+      //height: 70%;
+      //.height(485);
+      width: 100%;
+      //background:#3abbd5;
+       .bgLinear(#31A0CB, #4FC09F);
+      .trend_date {
+      }
+      .trend_bp_info {
+        //.height(60);
+      }
+      .trend_chart_bp {
+        position: relative;
+        //height: 100%;
+        //.height(425);
+        //.bottom(60);
+      }
+    }
+    .trend_record {
+      //height: 30%;
+      .marginBottom(96);
+    }
+  }
+
+  .date_button {
+    z-index: 2;
+    position: fixed;
+    .bottom(0);
+    background: #fdfdfd;
+    border-top: 1px solid #e3e3e3;
+    width: 100%;
+    .lineHeight(96);
+    .date_button_area {
+      .marginLeft(20);
+      .marginRight(20);
+      .marginTop(16);
+      .marginBottom(18);
+      border:1px solid #848484;
+      background-color: #fff;
+      border-radius: 5px;
+      .width(600);
+      overflow: hidden;
+      ul{
+        .width(605);
+      }
+      li{
+        float: left;
+        list-style: none;
+        .width(200);
+        z-index: 2;
+        text-align: center;
+        .lineHeight(60);
+        box-sizing: border-box;
+        .fontSize(24);
+        overflow: hidden;
+        color: #848484;
+        vertical-align: middle;
+        border-right:1px solid #848484;
+        &:last-child{
+          border: 0;
+        }
+      }
+      .btn_on{
+        color: #fff;
+        background-color: #848484;
+      }
+
+    }
+
+  }
+
+}

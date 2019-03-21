@@ -1,0 +1,7 @@
+export const LOADING = '加载中'
+export const SAVE = '保存中'
+export const SAVE_SUCCESS = '已保存'
+export const DELETE = '删除中'
+export const DELETE_SUCCESS = '已删除'
+export const GENERATE = '生成中'
+export const GENERATE_SUCCESS = '已生成'

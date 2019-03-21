@@ -1,0 +1,86 @@
+@import "../base/base";
+.m-chengyisheng-wrap{
+  position: relative;
+  color:#999;
+  text-align: center;
+  .fontSize(28);
+  .m-lexin-logo{
+    .width(80);
+    .height(50);
+    margin:0 auto;
+    .marginTop(350);
+    .marginBottom(40);
+    img{
+      width:100%;
+    }
+  }
+}
+.phoneBox{
+  .marginTop(20);
+  width: 100%;
+  height: 100%;
+  .weui_cells_title{
+    .marginTop(11);
+    .marginBottom(11);
+    color:#A5A5A5;
+    .fontSize(24);
+  }
+  .m-form-box div:first-child:after{
+        border-bottom:1px solid #d9d9d9; 
+        
+        
+  }
+
+  .weui_cells{
+    .marginTop(0);
+    .paddingLeft(30);
+    .fontSize(28);
+    &:before{
+      border-top:none;
+    }
+    &:after{
+      .left(30);
+      border:0
+    }
+    
+    .weui_cell{
+      .displayFlex();
+      .flexFlow(row nowrap);
+      .justifyContent(space-between);
+      .paddingTop(22);
+      .paddingLeft(0);
+      .paddingBottom(22);
+      .marginTop(0)
+    }
+  }
+  .weui_btn_mini{
+    position: absolute;
+    .right(20);
+    .top(12);
+  }
+  .weui_cells{
+    .weui_btn_primary,.weui_btn_default{
+      background-color: #00d5bf;
+      .fontSize(28);
+      .width(220);
+      .height(60);
+    }
+    .weui_btn_default{
+      background-color: #a5a5a5;
+      color:#fff;
+    }
+  }
+  .m-chengyisheng-tips{
+    .paddingTop(30);
+    .paddingLeft(50);
+    .fontSize(28);
+    color:#666;
+    li{
+      list-style: none;
+      .lineHeight(45)
+    }
+    li:last-child{
+      .paddingTop(20)
+    }
+  }
+}

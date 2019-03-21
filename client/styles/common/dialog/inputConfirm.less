@@ -1,0 +1,44 @@
+@import "./alert";
+
+.weui_dialog_confirm {
+  .weui_dialog_bd {
+    .paddingRight(20)!important;
+    .paddingLeft(20)!important;
+    position: relative;
+    .textArea {
+      box-sizing: border-box;
+      width: 100%;
+      resize: none;
+      .fontSize(28);
+      color: @cl;
+      .padding(14);
+      overflow-y:hidden;
+      .borderRadius(5);
+      .height(72);
+      border:1px solid #d4d4d4;
+    }
+    .close{
+      float: right;
+      text-align: center;
+      .fontSize(21);
+      .width(21);
+      font-weight: 700;
+      line-height: 1;
+      color: #FFFFFF;
+      filter: alpha(opacity=50);
+      opacity: .5;
+      background: #000000;
+      border-radius: 50%;
+      position: absolute;
+      .right(34);
+      .top(16);
+      .padding(5);
+    }
+    .length {
+      text-align: right;
+      color: #A5A5A5;
+      .fontSize(21);
+      font-family: PingFang SC,Arial,SimSun;
+    }
+  }
+}

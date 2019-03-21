@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{include './common/header'}}
+  <title>授权</title>
+  <style>
+    div {
+      text-align: center;
+    }
+
+    input, button {
+      width: 90%;
+      font-size: 20px;
+    }
+
+    #msg {
+      padding: 50px;
+      color: red;
+    }
+
+    button {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <input id="redirect" value="{{#redirect}}"/>
+</div>
+<div>
+  <img src="/authorize/qrcode?redirect={{#authorizeRedirect}}"/>
+</div>
+<div>
+  <button onClick="go()">跳转</button>
+  <button onClick="getCode()">获取Code</button>
+</div>
+<div id="msg">
+</div>
+<script>
+  var authorizeId = '{{#authorizeId}}'
+  var code
+  function getCode() {
+    fetch('/authorize/getCode?authorizeId=' + authorizeId).then(function (res) {
+      return res.json()
+    }).then(function (data) {
+      code = data.code
+      document.getElementById('msg').innerHTML = 'code : ' + code
+    })
+  }
+
+  function go() {
+    var url = document.getElementById('redirect').value
+    var index = url.indexOf('?')
+    if (index !== -1) {
+      url += '&'
+    } else {
+      url += '?'
+    }
+    url += 'code=' + code
+    window.location.href = url
+  }
+</script>
+</body>
+</html>

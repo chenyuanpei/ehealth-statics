@@ -1,0 +1,193 @@
+@import "../base/base";
+
+.toastBg {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.weui_toast {
+  top: 40%;
+  .marginTop(-110) !important;
+  .marginLeft(-110) !important;
+  .borderRadius(10);
+  .width(220) !important;
+  .minHeight(220) !important;
+
+  [class^="weui_icon_"], [class*=" weui_icon_"] {
+    position: absolute;
+    left: 50%;
+    .top(43);
+    margin-top: 0 !important;
+    &:before {
+      .marginLeft(-40);
+      color: #FFFFFF !important;
+      .fontSize(80);
+    }
+  }
+
+  .weui_icon_toast {
+    position: absolute;
+    left: 50%;
+    .top(28);
+    margin-top: 0 !important;
+    &:before {
+      .marginLeft(-55);
+      color: #FFFFFF !important;
+      .fontSize(110);
+    }
+  }
+
+}
+
+.weui_no_ico_toast {
+  top: 50%;
+  .marginTop(-40) !important;
+  .borderRadius(8);
+  width:auto;
+  .minHeight(80) !important;
+  position: fixed;
+  z-index: 50000;
+  left: 50%;
+  text-align:left;
+  background: rgba(40, 40, 40, 0.75);
+  color: #FFFFFF;
+  transform: translate(-50%);
+  .weui_toast_content{
+    .marginTop(0)!important;
+    .marginBottom(0)!important;
+    .paddingLeft(20);
+    .paddingTop(20);
+    .lineHeight(36);
+    white-space :nowrap;
+    .paddingBottom(20);
+    .paddingRight(20);
+    .fontSize(24)!important;
+    .orangeFont{
+      color:#ff7517;
+    }
+  }
+  [class^="weui_icon_"], [class*=" weui_icon_"] {
+    position: absolute;
+    left: 50%;
+    .top(43);
+    margin-top: 0 !important;
+    &:before {
+      .marginLeft(-40);
+      color: #FFFFFF !important;
+      .fontSize(80);
+    }
+  }
+
+  .weui_icon_toast {
+    position: absolute;
+    left: 50%;
+    .top(28);
+    margin-top: 0 !important;
+    &:before {
+      .marginLeft(-55);
+      color: #FFFFFF !important;
+      .fontSize(110);
+    }
+  }
+
+}
+.weui_toast_content {
+  margin-top: 64%;
+  .fontSize(28) !important;
+}
+
+@weui_loading_leaf_translate: 15.8 /@sizeNum * 1rem;
+@weui_loading_leaf_width: 16.28 /@sizeNum * 1rem;
+@weui_loading_leaf_height: 6.16 /@sizeNum * 1rem;
+
+.weui_loading_leaf {
+  position: absolute;
+  top: -1px;
+  opacity: 0.25;
+  &:before {
+    content: " ";
+    position: absolute;
+    width: @weui_loading_leaf_width;
+    height: @weui_loading_leaf_height;
+    background: rgb(209, 209, 213);
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px;
+    border-radius: 1px;
+    transform-origin: left 50% 0px;
+  }
+  &_0 {
+    .animation(opacity-60-25-0-12 1.25s linear infinite);
+    &:before {
+      .transform(rotate(0deg) translate(@weui_loading_leaf_translate, 0px));
+    }
+  }
+  &_1 {
+    .animation(opacity-60-25-1-12 1.25s linear infinite);
+    &:before {
+      .transform(rotate(30deg) translate(@weui_loading_leaf_translate, 0px));
+    }
+  }
+  &_2 {
+    .animation(opacity-60-25-2-12 1.25s linear infinite);
+    &:before {
+      .transform(rotate(60deg) translate(@weui_loading_leaf_translate, 0px));
+    }
+  }
+  &_3 {
+    .animation(opacity-60-25-3-12 1.25s linear infinite);
+    &:before {
+      .transform(rotate(90deg) translate(@weui_loading_leaf_translate, 0px));
+    }
+  }
+  &_4 {
+    .animation(opacity-60-25-4-12 1.25s linear infinite);
+    &:before {
+      .transform(rotate(120deg) translate(@weui_loading_leaf_translate, 0px));
+    }
+  }
+  &_5 {
+    .animation(opacity-60-25-5-12 1.25s linear infinite);
+    &:before {
+      .transform(rotate(150deg) translate(@weui_loading_leaf_translate, 0px));
+    }
+  }
+  &_6 {
+    .animation(opacity-60-25-6-12 1.25s linear infinite);
+    &:before {
+      .transform(rotate(180deg) translate(@weui_loading_leaf_translate, 0px));
+    }
+  }
+  &_7 {
+    .animation(opacity-60-25-7-12 1.25s linear infinite);
+    &:before {
+      .transform(rotate(210deg) translate(@weui_loading_leaf_translate, 0px));
+    }
+  }
+  &_8 {
+    .animation(opacity-60-25-8-12 1.25s linear infinite);
+    &:before {
+      .transform(rotate(240deg) translate(@weui_loading_leaf_translate, 0px));
+    }
+  }
+  &_9 {
+    .animation(opacity-60-25-9-12 1.25s linear infinite);
+    &:before {
+      .transform(rotate(270deg) translate(@weui_loading_leaf_translate, 0px));
+    }
+  }
+  &_10 {
+    .animation(opacity-60-25-10-12 1.25s linear infinite);
+    &:before {
+      .transform(rotate(300deg) translate(@weui_loading_leaf_translate, 0px));
+    }
+  }
+  &_11 {
+    .animation(opacity-60-25-11-12 1.25s linear infinite);
+    &:before {
+      .transform(rotate(330deg) translate(@weui_loading_leaf_translate, 0px));
+    }
+  }
+}

@@ -1,0 +1,267 @@
+@import "../base/base";
+
+.recordBox {
+  .borderRadius(10);
+  border-bottom:1px solid @globalBorderColor;
+  width: 100%;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  .m-record-more{
+    position: relative;
+    box-sizing: border-box;
+    border-left: 1px solid @globalBorderColor;
+    border-right: 1px solid @globalBorderColor;
+    .paddingLeft(24);
+    color:#676767;
+    .paddingRight(24);
+    .height(80);
+    .fontSize(28);
+    .lineHeight(80);
+
+    > span {
+      position: absolute;
+      top: 50%;
+      .marginTop(-19);
+      .right(14);
+      .height(38);
+      .width(38);
+      background-image: url(../../../static/images/btn_new_p.png);
+      background-size: 100% 100%;
+    }
+
+    > div {
+      border-top: 1px solid @globalBorderColor;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+  .chartBox {
+    position: relative;
+    .height(425);
+    width: 100%;
+
+    .chartBoxTop {
+      position: relative;
+      .paddingLeft(20);
+      .paddingRight(20);
+      .lineHeight(90);
+
+      &:after {
+        content: " ";
+        position: absolute;
+        .left(20);
+        .right(20);
+        bottom: 0;
+        height: 1px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        color: rgba(255, 255, 255, 0.18);
+        transform-origin: 0 100%;
+        //transform: scaleY(0.5);
+      }
+      .m-today-text{
+        position: absolute;
+        .left(20);
+        .top(72);
+      }
+      & > span {
+        .fontSize(32);
+        color: #FFFFFF;
+      }
+
+      & > div {
+        position: absolute;
+        .right(0);
+        top: 0;
+        .fontSize(24);
+        color: #FFFFFF;
+
+        span {
+          .paddingRight(20);
+        }
+        span:last-child{
+          .paddingRight(20);
+        }
+      }
+    }
+
+    .charTop {
+      position: relative;
+      box-sizing: border-box;
+      .paddingLeft(20);
+      .paddingRight(20);
+      span {
+        position: absolute;
+        .lineHeight(50);
+        .fontSize(20);
+        color: #FFFFFF;
+
+        &:last-child {
+          .right(20);
+        }
+      }
+
+    }
+
+    .lineChart {
+      position: absolute;
+      .top(120);
+      width: 100%;
+    }
+
+    .triangle-up {
+      width: 0;
+      height: 0;
+      border-left: 0.25rem solid transparent;
+      border-right: 0.25rem solid transparent;
+      border-bottom: 0.25rem solid #ffffff;
+      position: absolute;
+      bottom:0;
+    }
+  }
+  .chartBg-bs{
+    .bgLinear(#008DE7, #3B55E7)
+  }
+  .chartBg-tp{
+    background:#2cc1fb;
+  }
+  /* 图表背景 */
+  .chartBg-bp {
+     .bgLinear(#31A0CB, #4FC09F);
+
+    //background:#3abbd5;
+  }
+  /* 图表背景 */
+  .chartBg-bg {
+    // .bgLinear(#9770E7, #4EA6E6)
+    background:#3abbd5;
+  }
+  /* 图表背景 */
+  .chartBg-sleep {
+    // .bgLinear(#5541B2, #785FD3)
+    background:#3abbd5;
+  }
+  /* 图表背景 */
+  .chartBg-walking {
+    // .bgLinear(#2982F0, #59D2F3)
+    background:#3abbd5;
+  }
+}
+.recordInfo {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid @globalBorderColor;
+  border-bottom: 0;
+  border-top: 0;
+  .paddingLeft(180);
+  .paddingTop(20);
+  .height(140);
+  width: 100%;
+
+  .recordIcon {
+    position: absolute;
+    left: 0;
+    .top(25);
+    .width(180);
+    .height(56);
+    text-align: center;
+
+    img {
+      .width(56);
+      .height(56);
+    }
+
+    span {
+      position: absolute;
+      display: block;
+      .fontSize(28);
+      .lineHeight(28);
+      top: 100%;
+      .left(0);
+      width: 100%;
+    }
+
+  }
+  .recordIconSport {
+    position: absolute;
+    left: 0;
+    .top(27);
+    .width(166);
+    .height(56);
+    .lineHeight(56);
+    text-align: center;
+
+    img {
+      .width(56);
+      .height(56);
+    }
+  }
+
+  .weightValueDiv{
+    .lineHeight(110);
+  }
+  .weightValue{
+    color:#676767;
+    .fontSize(44)
+  }
+  .weightUnit{
+    color:#A5A5A5;
+    .fontSize(20);
+    .marginLeft(10)
+  }
+
+  .sleepData{
+    .paddingTop(20);
+    display:inline;
+
+    .sleepDataUnit{
+      color:#a5a5a5;
+      .fontSize(20);
+      .marginLeft(5);
+    }
+
+    .sleepDataValue{
+      color:#676767;
+      .fontSize(44);
+      .marginLeft(5);
+    }
+  }
+
+  .currentValBox {
+
+    height: 100%;
+
+    .texRow {
+      .paddingTop(21) !important;
+      & > span {
+        display: block;
+      }
+    }
+
+    & > div {
+      text-align: center;
+
+      & > span {
+        &:first-child {
+          .fontSize(20);
+          .lineHeight(24);
+          color: #9b9b9b;
+        }
+
+        &:last-child {
+          .fontSize(20);
+          .lineHeight(44);
+          color: #9b9b9b;
+          .num{
+            .fontSize(30);
+            color:#4a4a4a;
+          }
+        }
+      }
+    }
+  }
+
+}

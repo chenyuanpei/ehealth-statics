@@ -1,0 +1,89 @@
+@import "../../../base/base";
+
+.trend_body{
+  .historyInfo {
+    position: relative;
+    box-sizing: border-box;
+    border:0;
+    .paddingLeft(180);
+    .height(130);
+    width: 100%;
+    background: #ffffff;
+    &:not(:last-child):after{
+      overflow: hidden;
+      content: "";
+      border-bottom: 1px solid @globalBorderColor;
+      background: #fff;
+      height:0;
+      position: absolute;
+      bottom:0;
+      .left(30);
+      .right(30);
+    }
+
+    .historyTitle {
+      position: absolute;
+      left: 0;
+      color: #676767;
+      .width(180);
+      .lineHeight(130);
+      text-align: center;
+
+      span {
+        position: absolute;
+        display: block;
+        .fontSize(28);
+        top: 100%;
+        .left(0);
+        width: 100%;
+      }
+    }
+
+    .currentValBox {
+
+      height: 100%;
+
+      .texRow {
+        .paddingTop(39) !important;
+        & > span {
+          display: block;
+          &:first-child{
+            .fontSize(28)!important;
+          }
+        }
+      }
+      .historyDateNull{
+        position: relative;
+        padding-top: 0 !important;
+        .lineHeight(130);
+        & > span {
+          &:last-child {
+            display: none !important;
+          }
+        }
+      }
+
+      .historyTime{
+        .fontSize(28) !important;
+        .lineHeight(130);
+        color: #848484;
+      }
+
+      & > div {
+        text-align: center;
+
+        & > span {
+          &:first-child {
+            color: #848484;
+          }
+
+          &:last-child {
+            .fontSize(20);
+            color: #B8B8B8;
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,34 @@
+@import "../base/base";
+
+.preoperative{
+  .preoperativetab {
+    width: auto!important;
+    .height(80);
+    .lineHeight(80);
+    .marginLeft(30);
+    background: #FFFFFF;
+    #div {
+      float: left;
+    }
+    .name {
+      .fontSize(30);
+      color: #676767;
+      .marginLeft(0);
+    }
+    .right {
+      text-align: right;
+      .marginRight(30);
+      .fontSize(28);
+      color: #A5A5A5;
+      img{
+        .width(26);
+        .height(26);
+        .marginLeft(15);
+        vertical-align:-2px;
+      }
+    }
+    &:not(:first-child) {
+      border-top: 1px solid @globalBorderColor;
+    }
+  }
+}

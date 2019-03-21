@@ -1,0 +1,193 @@
+@import "../variable/global";
+
+.width(@p) {
+  width: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.minWidth(@p) {
+  min-width: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.height(@p) {
+  height: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.minHeight(@p) {
+  min-height: @p /(750/640*@sizeNum) * 1rem;
+}
+
+/*
+font
+*/
+.fontSize(@p) {
+  font-size: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.lineHeight(@p) {
+  line-height: @p /(750/640*@sizeNum) * 1rem;
+}
+
+/*
+position
+*/
+.top(@p) {
+  top: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.bottom(@p) {
+  bottom: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.left(@p) {
+  left: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.right(@p) {
+  right: @p /(750/640*@sizeNum) * 1rem;
+}
+
+/*
+padding
+*/
+.padding(@p) {
+  padding: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.padding(@p1, @p2) {
+  padding: @p1 /(750/640*@sizeNum) * 1rem @p2 /(750/640*@sizeNum) * 1rem;
+}
+
+.padding(@p1, @p2, @p3) {
+  padding: @p1 /(750/640*@sizeNum) * 1rem @p2 /(750/640*@sizeNum) * 1rem @p3 /(750/640*@sizeNum) * 1rem;
+}
+
+.padding(@p1, @p2, @p3, @p4) {
+  padding: @p1 /(750/640*@sizeNum) * 1rem @p2 /(750/640*@sizeNum) * 1rem @p3 /(750/640*@sizeNum) * 1rem @p4 /(750/640*@sizeNum) * 1rem;
+}
+
+.paddingTop(@p) {
+  padding-top: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.paddingBottom(@p) {
+  padding-bottom: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.paddingLeft(@p) {
+  padding-left: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.paddingRight(@p) {
+  padding-right: @p /(750/640*@sizeNum) * 1rem;
+}
+
+/*
+margin
+*/
+.margin(@p) {
+  margin: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.margin(@p1, @p2) {
+  margin: @p1 /(750/640*@sizeNum) * 1rem @p2 /(750/640*@sizeNum) * 1rem;
+}
+
+.marginTop(@p) {
+  margin-top: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.marginBottom(@p) {
+  margin-bottom: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.marginLeft(@p) {
+  margin-left: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.marginRight(@p) {
+  margin-right: @p /(750/640*@sizeNum) * 1rem;
+}
+
+/* border */
+.border(@p,@s,@c) {
+  border: @p /(750/640*@sizeNum) * 1rem @s @c;
+}
+
+/* border-width */
+.borderWidth(@p) {
+  border-width: @p /(750/640*@sizeNum) * 1rem;
+}
+.borderLeftWidth(@p) {
+  border-left-width: @p /(750/640*@sizeNum) * 1rem;
+}
+.borderRightWidth(@p) {
+  border-right-width: @p /(750/640*@sizeNum) * 1rem;
+}
+.borderTopWidth(@p) {
+  border-top-width: @p /(750/640*@sizeNum) * 1rem;
+}
+.borderBottomWidth(@p) {
+  border-bottom-width: @p /(750/640*@sizeNum) * 1rem;
+}
+/*
+border-radius
+*/
+.borderRadius(@p) {
+  border-radius: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.borderTopLeftRadius(@p) {
+  border-top-left-radius: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.borderTopRightRadius(@p) {
+  border-top-right-radius: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.borderBottomRightRadius(@p) {
+  border-bottom-right-radius: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.borderBottomLeftRadius(@p) {
+  border-bottom-left-radius: @p /(750/640*@sizeNum) * 1rem;
+}
+
+/*text*/
+.textIndent(@p) {
+  text-indent: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.maxWidth(@p) {
+  max-width: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.minWidth(@p) {
+  min-width: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.maxHeight(@p) {
+  max-height: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.minHeight(@p) {
+  min-height: @p /(750/640*@sizeNum) * 1rem;
+}
+
+// backgroundPosition
+.backgroundPosition(@x,@y) {
+  background-position: @x /(750/640*@sizeNum) * 1rem @y /(750/640*@sizeNum) * 1rem;
+}
+
+.backgroundPositionY(@p) {
+  background-position-y: @p /(750/640*@sizeNum) * 1rem;
+}
+
+.backgroundPositionX(@p) {
+  background-position-x: @p /(750/640*@sizeNum) * 1rem;
+}
+
+// backgroundSize
+.backgroundSize(@w, @h) {
+  background-size: @w /(750/640*@sizeNum) * 1rem @h /(750/640*@sizeNum) * 1rem;
+}
+

@@ -1,0 +1,22 @@
+@import "../../base/base";
+
+.userBox {
+  .displayFlex();
+  .height(85);
+  text-align: center;
+  z-index: 9;
+  background: #FFFFFF;
+  .btn {
+    z-index: 9;
+    width: 50%;
+    .fontSize(28);
+    color: #00D5BF;
+    .lineHeight(85);
+  }
+  .check {
+    border-bottom: 3px solid #00D5BF;
+  }
+  &:not(:first-child) {
+    border-left: 1px solid @globalBorderColor;
+  }
+}

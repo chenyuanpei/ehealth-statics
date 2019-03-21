@@ -1,0 +1,128 @@
+@import "../base/base";
+
+.opacityWrap{
+  opacity: 0;
+  width:100%;
+  height: 100%;
+  left:0;
+  top:0;
+  position: absolute;
+  z-index: 999;
+}
+
+.m-home-bottom-menu{
+  .displayFlex();
+  position: fixed;
+  z-index: 1000;
+  .height(98);
+  border-top:1px solid #c3c3c3;
+  background: #fff;
+  left:0;
+  bottom:0;
+  width:100%;
+  div:last-child{
+    border: 0!important;
+  }
+}
+.dd-menu {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  .fontSize(28);
+  color:#676767;
+  .lineHeight(98);
+  .width(322);
+  border-right:1px solid #c3c3c3;
+  button{
+    height:100%;
+    .lineHeight(98);
+    .fontSize(28);
+    color:#676767;
+  }
+  &.dd-menu-center .dd-menu-items {
+
+  }
+  .dd-menu-tab{
+    position: relative;
+    z-index: 5;
+    background:#fff;
+    img{
+      .marginRight(10);
+    }
+  }
+  .dd-items-center{
+    background-color: #fff;
+    border:1px solid #c3c3c3;
+    .borderRadius(8);
+    .width(170);
+    .paddingLeft(25);
+    .paddingRight(25);
+    bottom:-300%;
+    position: absolute;
+    z-index: 3;
+    margin-bottom:10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    left: 50%;
+    .marginLeft(-110);
+    transition:bottom 0.3s;
+    -moz-transition:bottom 0.3s; /* Firefox 4 */
+    -webkit-transition:bottom 0.3s; /* Safari and Chrome */
+    -o-transition:bottom 0.3s; /* Opera */
+  }
+  .dd-items-show{
+    bottom:100%;
+  }
+  .dd-items-center:before {
+    content:'';
+    position:absolute;
+    overflow:hidden;
+    .width(14);
+    .height(14);
+    background  :#fff;
+    border-right:1px solid #c3c3c3;
+    border-bottom:1px solid #c3c3c3;
+    -webkit-transform :rotate(45deg);
+    -moz-transform :rotate(45deg);
+    -o-transform  :rotate(45deg);
+    transform   :rotate(45deg);
+    left:30px;
+    overflow:hidden;
+    .left(95);
+    .bottom(-9);
+    color:#c3c3c3;
+  }
+
+  .dd-menu-items {
+
+
+
+    ul, ol {
+      list-style: none;
+      color: #666;
+      background-color: #fff;
+
+
+
+
+      li {
+        .height(80);
+        .lineHeight(80);
+        border-bottom:1px solid #f4f4f4;
+        &:hover:not([role="separator"]):not(.separator),
+
+
+        > button {
+          border: none;
+          background: transparent;
+        }
+      }
+      li:last-child{
+        border:0;
+      }
+    }
+  }
+
+}
+
+
+

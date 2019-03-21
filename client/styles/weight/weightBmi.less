@@ -1,0 +1,120 @@
+@import "../base/base";
+.m-weight-bmi-wrap{
+  min-height:100vh;
+  background: #fff;
+  position: relative;
+  .m-weight-physique-data{
+    .fontSize(80);
+    text-align: center;
+    .paddingTop(100);
+    color:#000;
+  }
+  .m-weight-physique-text{
+    text-align: center;
+    .paddingTop(20);
+    color:#000;
+    .fontSize(32);
+  }
+  .bmi-physique-wrap {
+    flex-grow: 99;
+    .marginTop(40);
+    position: relative;
+    .m-physique-data {
+      color: #666;
+      .fontSize(24);
+      position: absolute;
+      .displayFlex();
+      .top(0);
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      .m-physique-data-item {
+        .width(140);
+      }
+    }
+    .physique-index-line {
+      position: absolute;
+      .top(44);
+      left: 50%;
+      transform: translateX(-50%);
+      .height(24);
+      .borderRadius(24);
+      .displayFlex();
+    }
+    .physique-text-box {
+      position: absolute;
+      .top(98);
+      left: 50%;
+      .displayFlex();
+      transform: translateX(-50%);
+      .physique-text {
+        text-align: center;
+        .width(140);
+        .fontSize(24);
+        color: #666;
+      }
+    }
+    .physique-content {
+      .paddingTop(162);
+      color: #a5a5a5;
+      .fontSize(24);
+      .paddingBottom(40);
+      .physique-content-text{
+        border-top:1px solid #a5a5a5;
+        .marginLeft(40);
+        .marginRight(40);
+        .paddingTop(40);
+        .paddingLeft(10);
+        .paddingRight(10);
+        .title{
+          .paddingBottom(30);
+        }
+      }
+    }
+    .physique-index-line1 {
+      .height(16);
+      .width(140);
+      background: #00c5ff;
+      .borderBottomLeftRadius(24);
+      .borderTopLeftRadius(24);
+    }
+    .physique-index-line2 {
+      .height(16);
+      .width(140);
+      background: #6de016;
+    }
+    .physique-index-line3 {
+      .height(16);
+      .width(140);
+      background: #fbc914;
+    }
+    .physique-index-line4 {
+      .height(16);
+      .width(140);
+      background: #ff871b;
+      .borderBottomRightRadius(24);
+      .borderTopRightRadius(24);
+    }
+    .physique-index-line-active {
+      .marginTop(-4);
+      .borderWidth(4);
+      border-style: solid;
+      border-color: #fff;
+      box-shadow: 0px 0 5px #b8b8b8;
+    }
+    .progress-bar {
+      .height(40);
+      .width(6);
+      position: absolute;
+      background: #00c5ff;
+      .borderWidth(4);
+      border-style: solid;
+      border-color: #fff;
+      .borderRadius(7);
+      .marginTop(-17);
+      .marginLeft(-4);
+      .left(30);
+    }
+  }
+}
+

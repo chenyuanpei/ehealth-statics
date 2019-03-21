@@ -1,0 +1,115 @@
+@import "../base/base";
+.m-nickname-wrap .name{
+  color: #a5a5a5!important;
+}
+.m-nickname-wrap .m-tab-val-wrap{
+  color: #a5a5a5!important;
+}
+.m-confim-text-first{
+  .paddingLeft(30);
+  .paddingRight(30);
+  .marginBottom(30);
+  .lineHeight(36);
+}
+.m-confim-text-second{
+  .paddingLeft(30);
+  .paddingRight(30);
+  .lineHeight(36);
+}
+.member_info{
+
+  .data_head{
+    background: white;
+  }
+  .m-new-bottom-tips{
+    color:#fd645c;
+    .paddingTop(20);
+    .paddingLeft(30);
+    .paddingRight(30);
+    .fontSize(24);
+  }
+  .relation-line{
+    position: relative;
+    .dataTop{
+      .paddingTop(40)!important;
+      .paddingBottom(40)!important;
+    }
+    .avatarBox{
+      .width(120)!important;
+      .height(120)!important;
+    }
+    &:after{
+
+      overflow: hidden;
+      content: "";
+      border-bottom: 1px solid @globalBorderColor;
+      background: #fff;
+      .height(0);
+      position: absolute;
+      bottom:0;
+      z-index: 3;
+      .left(30);
+      .right(0);
+    }
+  }
+  .m-tips-relation{
+    .paddingTop(20);
+    .paddingLeft(30);
+    .paddingRight(30);
+    color:#2DD6B9;
+    .fontSize(24);
+  }
+  .dataTop{
+    .width(120);
+    .height(120);
+    margin:0 auto;
+    .paddingTop(23);
+    .paddingBottom(34);
+
+    .camera{
+      .marginLeft(86);
+      .marginTop(-26);
+      zIndex: 100;
+      position:relative;
+      img{
+       .width(30);
+        .height(26);
+      }
+    }
+  }
+  .m-new-member-tips{
+      color:#A5A5A5;
+      .height(80);
+      .lineHeight(80);
+      .paddingLeft(30);
+      .fontSize(28);
+  }
+  .tips_one{
+    color:#A5A5A5;
+    .paddingTop(11);
+    .paddingBottom(11);
+    .paddingLeft(35);
+    .fontSize(24);
+  }
+  .tips_two{
+    color:#A5A5A5;
+    .paddingTop(11);
+    .paddingLeft(35);
+    .fontSize(24);
+    text-align:center;
+  }
+  .btn_div{
+    .paddingTop(20);
+  }
+  .save_btn{
+      .width(550)!important;
+      .fontSize(28)!important;
+  }
+  .part_two{
+    .paddingTop(15);
+  }
+  .alertContent{
+    .padding(15);
+    text-align:left;
+  }
+}

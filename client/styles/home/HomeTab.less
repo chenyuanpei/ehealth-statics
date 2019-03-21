@@ -1,0 +1,80 @@
+@import "../base/base";
+.m-home-tab-wrap{
+  background:#fff;
+  .borderRadius(8);
+  .marginTop(30);
+  .marginRight(10);
+  .marginLeft(10);
+  .paddingLeft(10);
+  .paddingRight(10);
+  .paddingTop(10);
+  .paddingBottom(10);
+}
+.m-tab-bp{
+  background:#09c19a;
+}
+.m-tab-bs{
+  background:#1991ec;
+}
+.m-tab-weight{
+  background:#1cc4c1;
+}
+.m-tab-tp{
+  background:#f8c241;
+}
+.m-tab-heartRate{
+  background:#ff7a60;
+}
+.m-tab-step{
+  background:#50b2fd;
+}
+.m-tab-sleep{
+  background:#8e61eb;
+}
+.m-tab-wrap{
+  .marginBottom(10);
+  .borderRadius(4);
+  .height(150);
+  .lineHeight(150);
+  .m-home-tab-img {
+    .marginLeft(30);
+    .width(40);
+    .height(40);
+    display: inline-block;
+    color: #fff;
+    .fontSize(28);
+  }
+  .m-home-tab-name {
+    .marginLeft(30);
+    .fontSize(30);
+    color: #fff;
+  }
+  .m-home-tab-data{
+    .marginLeft(30);
+    color:#fff;
+    .fontSize(24);
+    span{
+      .marginRight(10);
+      .fontSize(30);
+    }
+    span:last-child{
+      .fontSize(30)
+    }
+  }
+  .m-home-tab-right {
+    text-align: right;
+    .paddingRight(30);
+    .fontSize(24);
+    color: #fff;
+    span{
+      img{
+        .width(26);
+        .height(26);
+        vertical-align:-2px;
+      }
+    }
+  }
+  &:last-child {
+    .marginBottom(0);
+  }
+}

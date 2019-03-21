@@ -1,0 +1,82 @@
+/*过渡效果*/
+.transition(@a) {
+  -webkit-transition: @a;
+  -moz-transition: @a;
+  -ms-transition: @a;
+  -o-transition: @a;
+  transition: @a;
+}
+
+/*线性渐变(背景)*/
+.bgLinear(@c2,@c1) {
+  //filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=`${@c2}`,endcolorstr=`${@c1}`,gradientType=0);
+  //-ms-filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=`${@c2}`,endcolorstr=`${@c1}`,gradientType=0);/*IE8*/
+  background:@c2; /* 一些不支持背景渐变的浏览器 */
+  background:-moz-linear-gradient(top, @c2, @c1);
+  background:-webkit-gradient(linear, 0 0, 0 bottom, from(@c2), to(@c1));
+  background:-o-linear-gradient(top, @c2, @c1);
+  background: linear-gradient(@c2, @c1);
+}
+
+.animation(@a){
+  -webkit-animation: @a;
+  -moz-animation: @a;
+  -ms-animation: @a;
+  -o-animation: @a;
+  animation: @a;
+}
+
+.transform(@a) {
+  -webkit-transform: @a;
+  -moz-transform: @a;
+  -ms-transform: @a;
+  -o-transform: @a;
+  transform: @a;
+}
+
+/*translate*/
+.translate(@a1,@a2) {
+  -webkit-transform: translate(@a1, @a2);
+  -moz-transform: translate(@a1, @a2);
+  -ms-transform: translate(@a1, @a2);
+  -o-transform: translate(@a1, @a2);
+  transform: translate(@a1, @a2);
+}
+
+/*flex*/
+.displayFlex() {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-box-sizing: border-box;
+}
+
+.flex(@a) {
+  -webkit-box-flex: @a;
+  -webkit-flex: @a;
+  -moz-flex: @a;
+  -ms-flex: @a;
+  flex: @a;
+}
+
+.flexFlow(@a) {
+  flex-flow: @a;
+  -webkit-flex-flow: @a;
+}
+
+.justifyContent(@a) {
+  -webkit-justify-content: @a;
+  justify-content: @a;
+}
+
+.alignItems(@a) {
+  align-items: @a;
+  -webkit-align-items: @a;
+}
+.alignSelf(@a) {
+  align-self: @a;
+  -webkit-align-self: @a;
+}
+

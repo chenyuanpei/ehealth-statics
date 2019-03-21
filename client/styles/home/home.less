@@ -1,0 +1,195 @@
+@import "../base/base";
+
+body{
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.m-home-wrapper{
+  .paddingBottom(130);
+}
+#homePage {
+  .contentArea{
+    position: relative;
+  }
+  .add_member {
+    text-align: center;
+    .paddingTop(100);
+    .img {
+      .marginBottom(29);
+      .width(200);
+      .height(200);
+    }
+    .text {
+      color: #676767;
+      .fontSize(28);
+      .marginLeft(100);
+      .marginRight(100);
+    }
+  }
+  .m-bottom-text{
+    text-align: center;
+    .fontSize(30);
+    color:#676767;
+    .marginTop(-110);
+  }
+}
+.recordInfoDetail {
+  position: relative;
+  background: #fff;
+  box-sizing: border-box;
+  border: 1px solid @globalBorderColor;
+  border-bottom: 0;
+  border-top: 0;
+  .paddingLeft(156);
+  .height(140);
+  width: 100%;
+
+  .recordIcon {
+    position: absolute;
+    left: 0;
+    .top(20);
+    .width(156);
+    .paddingTop(10);
+    .height(56);
+    text-align: center;
+
+    img {
+      .width(56);
+      .height(56);
+    }
+
+    span {
+      position: absolute;
+      display: block;
+      .fontSize(28);
+      .lineHeight(28);
+      top: 100%;
+      .left(0);
+      width: 100%;
+    }
+
+  }
+
+  .currentValBox {
+
+    height: 100%;
+    .paddingTop(20);
+    .paddingBottom(20);
+    .texRow {
+      .paddingTop(21) !important;
+      & > span {
+        display: block;
+      }
+    }
+    .texRow1{
+      .paddingTop(23);
+    }
+    .m-sugar-value{
+      .marginTop(-10);
+    }
+    & > div {
+      text-align: center;
+
+      & > span {
+        &:first-child {
+          .fontSize(28);
+          .lineHeight(44);
+          color: #676767;
+        }
+
+        &:last-child {
+          .fontSize(20);
+          .lineHeight(20);
+          color: #A5A5A5;
+        }
+      }
+    }
+  }
+
+}
+.record-no_data {
+  color: @recordNoDataColor !important;
+}
+
+.record-3 {
+  color: @recordHighColor !important;
+}
+
+.record-4 {
+  color: @recordHighColor !important;
+}
+
+.record-2 {
+  color: @recordNormalColor !important;
+}
+
+.record-1 {
+  color: @recordLightColor !important;
+}
+
+.record-0 {
+  color: @recordLightColor !important;
+}
+
+.icon_record_sugar {
+  .width(30);
+  .height(40);
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+//血压图标
+.icon_sugar_no_data {
+  background-image: url(../../../static/images/record/bs/icon_blood_sugar_no_data.png);
+}
+.icon_sugar_0{
+  background-image: url(../../../static/images/record/bs/icon_blood_sugar_light.png);
+}
+.icon_sugar_1 {
+  background-image: url(../../../static/images/record/bs/icon_blood_sugar_light.png);
+}
+.icon_sugar_2 {
+  background-image: url(../../../static/images/record/bs/icon_blood_sugar_normal.png);
+}
+.icon_sugar_3 {
+  background-image: url(../../../static/images/record/bs/icon_blood_sugar_height.png);
+}
+.icon_sugar_undefined{
+  background-image: url(../../../static/images/record/bs/icon_blood_sugar_no_data.png);
+}
+.icon_sugar_4 {
+  background-image: url(../../../static/images/record/bs/icon_blood_sugar_height.png);
+}
+.m-day-bottom-text{
+  position: absolute;
+  width:100%;
+  color:#fff;
+  .top(410);
+  z-index:200;
+  .fontSize(24);
+  text-align: center;
+  .m-first-day{
+    position:absolute;
+    .left(55);
+    .width(60);
+    .bottom(0);
+  }
+  .m-last-day{
+    position: absolute;
+    .right(30);
+    .width(60);
+    .bottom(0);
+  }
+  .m-mid-day{
+    position: absolute;
+    left:50%;
+    .width(60);
+    .marginLeft(-25);
+    bottom:0;
+  }
+
+}

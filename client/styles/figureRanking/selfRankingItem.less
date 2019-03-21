@@ -1,0 +1,49 @@
+@import "../base/base750";
+.self-ranking-item{
+  .height(160);
+  width:100%;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-align-items: center;
+  align-items: center;
+  .fontSize(28);
+  color:#ffffff;
+  border-bottom:1px solid #000000;
+  background:url('../../../static/images/figureRanking/bg_texture.png') repeat #303030;
+  background-size:20px 20px;
+  .head-img{
+    .marginLeft(100);
+    .height(64);
+    .width(64);
+    border-radius:50%;
+    background:#ffffff;
+  }
+  .name{
+    .marginLeft(60);
+    .width(140);
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+  }
+  .rank{
+    .marginTop(12);
+    .marginLeft(60);
+    .fontSize(24);
+    color:#ffffff;
+  }
+  .score{
+    color:#ffffff;
+    .marginLeft(52);
+  }
+  .heart-img{
+    .width(36);
+    .height(36);
+    .marginLeft(84);
+  }
+  .heart-num{
+    color:#ffffff;
+    .marginLeft(12);
+  }
+}

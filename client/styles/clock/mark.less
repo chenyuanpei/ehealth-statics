@@ -1,0 +1,237 @@
+@import "../base/base750";
+.m-confim{
+  .paddingLeft(30);
+  .paddingRight(30);
+}
+.m-mark-wrap{
+  min-height:100vh;
+  background: url("../../../static/images/clock/img_blood_pressure_punch_background.png") no-repeat left top;
+  -webkit-background-size:100% 100%;
+  background-size:100% 100%;
+
+  .m-mark-tips{
+    background:#fff;
+    marin:0 auto;
+    .borderRadius(8);
+    .height(60);
+    .lineHeight(60);
+    .paddingLeft(20);
+    .paddingRight(20);
+    width:auto;
+    display:inline-block;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    .fontSize(28);
+    .marginTop(30);
+  }
+  .m-process-wrap{
+    .marginTop(14);
+    position:relative;
+    .height(110);
+    overflow: hidden;
+    .marginLeft(14);
+    .marginRight(14);
+    .m-process-percent{
+      position: absolute;
+      .height(6);
+      left:0;
+      background: #20a0ff;
+      top:50%;
+      width:100%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      z-index: 11;
+    }
+    .m-process-div{
+      .marginLeft(50);
+      .marginRight(50);
+      position: relative;
+      .height(100);
+    }
+    .m-process-span{
+      position: absolute;
+      z-index: 10;
+      .height(6);
+      background: #bbe8f7;
+      top:50%;
+      left:0;
+      width:100%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    .m-circle-wrap{
+      position: relative;
+      .top(-100);
+      .left(0);
+    }
+    ul,li{
+      list-style:none;
+    }
+    li{
+      float:left;
+      position: relative;
+      z-index: 20;
+      .fontSize(24);
+      color:#000;
+      display:block;
+      text-align: center;
+      .width(100);
+      .paddingTop(25);
+      .height(75);
+      .marginRight(105);
+      .circle{
+        overflow: hidden;
+        padding:0;
+        .width(50);
+        background: #bbe8f7;
+        .height(50);
+        .borderRadius(25);
+        display:block;
+        margin:0 auto;
+        .marginBottom(4);
+      }
+    }
+    li:last-child{
+      margin-right:0;
+    }
+    li.processLi{
+      background:url("../../../static/images/clock/img_achieve_progress_background.png") no-repeat left top;
+      -webkit-background-size:100% auto;
+      background-size:100% auto;
+      .circle{
+
+        background: #20a0ff url('../../../static/images/clock/icon_tick_progress.png') no-repeat center center;
+        -webkit-background-size:80% auto;
+        background-size:90% auto;
+      }
+    }
+  }
+  .hackbox{
+    clear:both;
+  }
+  .m-mark-btn-wrap{
+    .marginTop(40);
+    .before_btn{
+      .width(500);
+      .borderRadius(100);
+      .fontSize(32);
+      background: #b8b8b8!important;
+    }
+    .blue_btn{
+      .width(500);
+      .borderRadius(100);
+      .fontSize(32);
+      background:#20a0ff!important;
+    }
+    p{
+      color:#fff;
+      .fontSize(28);
+      text-align: center;
+      .paddingTop(20);
+    }
+  }
+  .m-public-device-info{
+    position: fixed;
+    .paddingTop(30);
+    overflow: auto;
+    .top(114);
+    .bottom(114);
+    .left(30);
+    .right(30);
+    .paddingBottom(30);
+    .paddingLeft(30);
+    .paddingRight(30);
+    z-index:10000;
+    color:#fff;
+    .m-public-dev-info-close{
+      color:#fff;
+      .fontSize(56);
+      position: fixed;
+      .right(60);
+      .top(124);
+      z-index: 40;
+      transform:rotate(45deg);
+      -ms-transform:rotate(45deg); 	/* IE 9 */
+      -moz-transform:rotate(45deg); 	/* Firefox */
+      -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+      -o-transform:rotate(45deg); 	/* Opera */
+    }
+    .m-opacity-wrap{
+      background: #000;
+      opacity: 0.7;
+      position: fixed;
+      .left(30);
+      .top(114);
+      .bottom(114);
+      .right(30);
+      .borderRadius(10);
+      z-index:2;
+    }
+    h3{
+      .paddingBottom(20);
+      .fontSize(32);
+    }
+    p{
+      .paddingBottom(15);
+      .fontSize(28);
+    }
+    .m-public-column{
+      position: relative;
+      z-index: 4;
+      .paddingBottom(45);
+      ol{
+        .paddingLeft(30);
+      }
+      li{
+        list-style-type: decimal;
+        .fontSize(28);
+        .lineHeight(42);
+      }
+    }
+    .m-public-column:last-child{
+      padding-bottom:0!important;
+    }
+
+
+  }
+  .m-bottom-btn-wrap{
+    .paddingTop(20);
+    position: relative;
+    .height(60);
+    .paddingBottom(30);
+  }
+  .m-rule-btn{
+    position: absolute;
+    .right(30);
+    .top(0);
+    z-index:30;
+    .borderTopLeftRadius(60);
+    .borderBottomLeftRadius(60);
+    .width(160);
+    .fontSize(32);
+    color:#fff;
+    .lineHeight(60);
+    .height(60);
+    text-align: center;
+  }
+  .m-opacity-btn{
+    position: absolute;
+    z-index:20;
+    .right(30);
+    .top(0);
+    .width(160);
+    .height(60);
+    .borderRadius(60);
+    background: #000;
+    opacity:0.5;
+    z-index: 3;
+  }
+}
+

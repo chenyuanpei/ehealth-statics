@@ -1,0 +1,132 @@
+rem(a)
+  a / (750/640*50)rem
+
+weight-fc-676767 = #676767
+weight-fc-a5a5a5 = #a5a5a5
+
+.weight-page
+  background:#ffffff;
+  .chart-title
+    color #ffffff
+    font-size rem(32)
+    padding-top rem(40)
+    padding-bottom rem(24)
+    text-align center
+    background #0DC8AA
+    a
+      position absolute
+      right rem(20)
+      top rem(20)
+  .icon-statistic
+    width rem(60)
+    height rem(60)
+    overflow visible
+  .chart
+    width 100%
+    height rem(400)
+    background #0DC8AA
+  .chart-home
+    width 100%
+    height rem(390)
+
+  .no-data
+    color #ffffff
+    font-size rem(30)
+    text-align center
+    line-height rem(400)
+    opacity 0.6
+
+  .weight-date
+    height rem(90)
+    line-height rem(90)
+    padding 0 rem(40)
+    display flex
+    font-size rem(28)
+    position relative
+  .weight-date:after
+    content ''
+    height 1px
+    width 200%
+    position absolute
+    left -50%
+    bottom 0
+    background-color #d9d9d9
+    transform scale(0.5)
+  .weight-date-text
+    color weight-fc-676767
+    font-size rem(28)
+    flex-grow 1
+  .weight-delete
+    color weight-fc-676767
+    font-size rem(28)
+
+  .alert-bg
+    width 100%
+    height 100%
+    position  fixed
+    top 0
+    left 0
+    opacity 0.6
+    background #000000
+    z-index 1000
+  .alert-delete
+    width rem(560)
+    height rem(300)
+    background #ffffff
+    position fixed
+    top 28%
+    left 50%
+    margin-left rem(-280)
+    z-index 1001
+    border-radius 8px
+  .alert-delete-text
+    font-size rem(36)
+    color #414141
+    line-height rem(200)
+    height rem(200)
+    text-align center
+  .alert-delete-btn
+    display flex
+    text-align center
+    border-top 1px solid #d9d9d9
+  .alert-delete-cancel
+    flex-grow 1
+    line-height rem(100)
+    color #b6b6b6
+    font-size rem(36)
+    border-right 1px solid #d9d9d9
+  .alert-delete-confirm
+    flex-grow 1
+    line-height rem(100)
+    color #1eabe1
+    font-size rem(36)
+  .border-none
+    border-bottom none
+  .border-none:after
+    content ''
+    height 0px
+    width 200%
+    position absolute
+    left -50%
+    bottom 0
+    background-color #ffffff
+    transform scale(0.5)
+    .m-device-bind-tips
+      height rem(80)
+      line-height rem(80)
+      padding-left rem(20)
+      background #6abfff
+      color #fff
+      font-size rem(28)
+    .m-close
+      color #fff
+      font-size rem(66)
+      position absolute
+      right rem(15)
+      top rem(-4)
+      z-index 40
+      transform rotate(45deg)
+      -ms-transform rotate(45deg) 	/* IE 9 */
+      -moz-transform rotate(45deg) 	/* Firefox */
+      -webkit-transform rotate(45deg) /* Safari 和 Chrome */
+      -o-transform rotate(45deg)  	/* Opera */

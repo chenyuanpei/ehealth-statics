@@ -1,0 +1,40 @@
+/*兼容微信*/
+.weui_dialog {
+  .translate(-50%, -50%);
+}
+
+.weui_dialog_ft {
+  .displayFlex();
+  a {
+    width: 50%;
+    .flex(1);
+  }
+}
+
+.weui_actionsheet {
+  .transform(translate(0, 100%));
+  .transition(all .5s ease);
+}
+
+.weui_actionsheet_toggle {
+  .transform(translate(0, 0));
+}
+
+.weui_btn:after {
+  border: 0;
+}
+// 微信UI按钮重置
+@weuiBtnFontColor:#FFFFFF;
+@weuiBtnActiveFontColor:rgba(255,255,255,.4);
+@weuiBtnPrimaryBg:#00d5bf;
+@weuiBtnPrimaryActiveBg:#00D5C3;
+.weui_btn_primary {
+  background-color: @weuiBtnPrimaryBg!important;
+  &:not(.weui_btn_disabled):visited {
+    color: @weuiBtnFontColor!important;
+  }
+  &:not(.weui_btn_disabled):active {
+    color: @weuiBtnActiveFontColor;
+    background-color: @weuiBtnPrimaryActiveBg!important;
+  }
+}

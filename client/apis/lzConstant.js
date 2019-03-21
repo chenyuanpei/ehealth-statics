@@ -1,0 +1,1 @@
+export const checkUser = 'third_user_account/check_user'

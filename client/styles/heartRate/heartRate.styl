@@ -1,0 +1,407 @@
+rem(a)
+  (a / (750/640*50))rem
+
+rem2(a)
+  ((a*32) / (750/640*50))rem
+
+rem3(a)
+  (a / 50)rem
+
+split-line-color= #d9d9d9
+
+*
+  box-sizing border-box
+body,ul,li
+  padding 0
+  margin 0
+  border 0
+
+.icon
+  width rem2(1.88)
+  height rem2(1.88)
+
+.icon2
+  width rem2(0.7)
+  height rem2(0.7)
+  margin-left rem(20)
+
+
+.heartRate-page
+  background:#ffffff;
+  .m-device-bind-tips
+    height rem(80)
+    line-height rem(80)
+    padding-left rem(20)
+    background #6abfff
+    color #fff
+    font-size rem(28)
+  .m-close
+    color #fff
+    font-size rem(66)
+    position absolute
+    right rem(15)
+    top rem(-4)
+    z-index 40
+    transform rotate(45deg)
+    -ms-transform rotate(45deg) 	/* IE 9 */
+    -moz-transform rotate(45deg) 	/* Firefox */
+    -webkit-transform rotate(45deg) /* Safari 和 Chrome */
+    -o-transform rotate(45deg)  	/* Opera */
+  .title
+    font-size rem2(1)
+    //color #333333
+    padding-top rem2(1.25)
+    padding-bottom rem2(0.625)
+    position relative
+    text-align center
+    a
+      position absolute
+      top rem2(0.625)
+      right rem2(0.625)
+
+
+
+  li
+    display inline-block
+
+  /*.this-week*/
+  /*display flex*/
+  /*justify-content space-between*/
+  /*align-items center*/
+  /*height 2.19rem*/
+  /*padding 0 1.25rem*/
+  /*background #f2f2f2*/
+  /*font-size .875rem*/
+  /*color #999999*/
+
+  /*.latest*/
+  /*padding 0 1.25rem*/
+
+
+  /*.loading-item*/
+  /*justify-content center*/
+  .mark-samples
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    list-style none
+    padding 0 rem2(3.5)
+    font-size rem2(0.625)
+    li
+      flex 1
+      -webkit-flex 1
+      -ms-flex 1
+      -moz-flex 1
+      display -webkit-box
+      display -moz-box
+      display -ms-flexbox
+      display -webkit-flex
+      display flex
+      align-items center
+      justify-content center
+      -moz-justify-content center
+      -ms-justify-content center
+      -webkit-justify-content center
+      //&:last-child
+      //  justify-content flex-end
+      //&:first-child
+      //  justify-content flex-start
+    .color-mark
+
+      display -webkit-box
+      display -moz-box
+      display -ms-flexbox
+      display -webkit-flex
+      display flex
+      width rem3(20)
+      height rem3(20)
+      border rem3(1) solid #c0c0c0
+      border-radius 1px
+      margin-right rem3(10)
+  .chart
+    //padding 1.7rem 0 0 0
+    .labels
+      height rem2(2.94)
+      display -webkit-box
+      display -moz-box
+      display -ms-flexbox
+      display -webkit-flex
+      display flex
+      justify-content center
+      -moz-justify-content center
+      -ms-justify-content center
+      -webkit-justify-content center
+      align-items center
+      font-size rem2(0.75)
+      //color #999999
+      p
+        flex 1
+        &:last-child
+          text-align right
+          margin-right rem(30)
+        &:first-child
+          justify-content left
+          margin-left rem(30)
+
+  .no-data-tip
+    margin-top rem2(5)
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    justify-content center
+    -moz-justify-content center
+    -ms-justify-content center
+    -webkit-justify-content center
+    align-items center
+    font-size rem2(1)
+    opacity 0.6
+  //color #999999
+
+  //////
+  .desc
+    padding 0 rem2(1.25)
+    text-align left
+
+    .icon
+      width rem2(0.8125)
+      height rem2(0.8125)
+    .subtitle
+      img
+        margin-right rem2(0.3125)
+      display -webkit-box
+      display -moz-box
+      display -ms-flexbox
+      display -webkit-flex
+      display flex
+      align-items center
+      justify-content flex-start
+      -moz-justify-content flex-start
+      -ms-justify-content flex-start
+      -webkit-justify-content flex-start
+      color #a5a5a5
+      font-size rem2(0.875)
+      font-weight normal
+    .bar
+      height rem2(0.31)
+      border-radius 2px
+
+  .desc-item
+    padding rem2(0.94) 0
+    &:first-child
+      border-bottom 1px solid split-line-color
+  .cur-heart-rate
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    color #676767
+    margin-top rem2(0.625)
+    align-items center
+    .num
+      font-size rem2(2.5)
+
+  .comment
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    flex-direction column
+    -webkit-flex-direction column
+    justify-content space-between
+    -moz-justify-content space-between
+    -webkit-justify-content space-between
+    -ms-justify-content space-between
+
+    //align-items center
+    margin-left rem2(0.3125)
+    height 100%
+  .ue
+    flex 1
+    -webkit-flex 1
+    -moz-box-flex 1
+    -ms-flex 1
+    font-size rem2(0.875)
+  .ut
+    flex 1
+    -webkit-flex 1
+    -moz-box-flex 1
+    -ms-flex 1
+    color #a5a5a5
+    font-size rem2(0.75)
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    align-items baseline
+  .total-desc
+    color #676767
+    margin-top rem2(0.625)
+
+  .quality-st
+    padding rem2(0.94) 0
+
+  .st
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    color #676767
+    margin-top rem2(1.25)
+    height 0.64rem
+    &:first-child
+      margin-top 0
+    .st-name
+      flex 1
+      -webkit-flex 1
+      -moz-box-flex 1
+      -ms-flex 1
+      font-size rem2(1)
+
+    .st-desc
+      width rem(474)
+      flex 5
+      -webkit-flex 5
+      -moz-box-flex 5
+      -ms-flex 5
+      position relative
+      top -0.4rem
+    .n
+      font-size rem2(1)
+    .u
+      font-size rem2(0.75)
+
+  .this-week
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    justify-content space-between
+    -webkit-justify-content space-between
+    height rem2(2.19)
+    padding 0 rem2(1.25)
+    background #f2f2f2
+    font-size rem2(0.875)
+  .latest
+    padding 0 rem2(1.25)
+    overflow hidden
+  .latest-item,.loading-item
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    justify-content space-between
+    -webkit-justify-content space-between
+    align-items center
+    height rem2(4.375)
+    font-size rem2(1)
+    //border-bottom 1px solid #b6b6b6
+    position relative
+    &:after
+      content ''
+      height 1px
+      width 300%
+      position absolute
+      left 0
+      bottom 0
+      background split-line-color
+      transform scale(0.5) translateX(-50%)
+    &:last-child
+      &:after
+        display none
+    a
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
+      z-index 101
+      background transparent
+    .simple-hr
+      display inline-block
+    .right-wrapper
+      display -webkit-box
+      display -moz-box
+      display -ms-flexbox
+      display -webkit-flex
+      display flex
+      align-items center
+
+  .loading-item
+    justify-content center
+  .bg
+    background #2fa7c5
+    color #ffffff
+    min-height rem2(15.625)
+
+  .bar
+    height rem2(0.31)
+    border-radius 2px
+    width 100%
+    background black
+
+  .svg-wrapper
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    justify-content center
+    -webkit-justify-content center
+    position relative
+    margin-top rem2(1.7)
+
+  .bgLines
+    position absolute
+    z-index 1
+    top 0
+    left 0
+    height 100%
+    width 100%
+  .line-wrapper
+    width  rem(670)
+    margin auto
+  .line
+    position absolute
+    height 1px
+    //background split-line-color
+    border-bottom 1px dashed #ffffff
+    width rem(670)
+    transform  scaleY(0.5)
+    margin auto
+    bottom 0
+
+  .ver-labels
+    text-align right
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    position absolute
+    left rem(10)
+    bottom rem(5)
+    flex-direction column
+    -webkit-flex-direction column
+    justify-content space-between
+    -webkit-justify-content space-between
+    //color #999999
+    height 100%
+    font-size rem2(0.75)
+
+  svg
+    position relative
+    z-index 101
+
+  .heartRate-tip-svg
+    position: absolute;
+    margin-top: rem(-40);

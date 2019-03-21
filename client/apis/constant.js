@@ -1,0 +1,15 @@
+export const healthServer = 'health_service'
+export const bloodpressureService = 'bloodpressure_service'
+export const bloodSugarService = 'bloodsugar_service'
+export const publicDeviceService = 'bloodpressure_service/bp_extra'
+export const bsService = 'bloodsugar_service/bs/health'
+export const otcService = 'healthoperation_service/otc'
+export const basisService = 'supportplatform_service'
+export const imService = 'im_service'
+export const temperatureService = 'temperature_service/temperature'
+export const enterpriseConscribeService = 'healthoperation_service/enterprise_conscribe'
+export const shortUrlService = 'health_service/shorturl'
+export const healthoperationService = 'healthoperation_service/continuousBp'
+export const datacollectionRest = 'health_service'
+
+

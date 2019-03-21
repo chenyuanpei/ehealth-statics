@@ -1,0 +1,97 @@
+@import "../base/base";
+
+.message {
+  .msgTab{
+    .height(160);
+    background:#FFFFFF;
+    .padding(0,0,0,30);
+    .top{
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      .info{
+        .fontSize(28);
+        color:#676767;
+        .marginTop(24);
+        -webkit-flex-grow:1;
+        -ms-flex-grow:1;
+        flex-grow: 1;
+        width:40%;
+        .height(78);
+        .lineHeight(33);
+        .marginRight(20);
+        div{
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .member{
+          .marginTop(13);
+        }
+      }
+      .time{
+        .fontSize(22);
+        color:#a5a5a5;
+        .marginTop(24);
+        .marginRight(50);
+      }
+    }
+    .bottom{
+      .marginTop(13);
+      .content{
+        .fontSize(24);
+        color:#a5a5a5;
+        .width(450);
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        .lineHeight(29);
+      }
+    }
+    .center{
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      position:absolute;
+      .right(20);
+      .marginTop(-70);
+      .remind{
+        .height(30);
+        .width(30);
+        background:#fd645c;
+        border-radius:50%;
+        color:#ffffff;
+        .fontSize(22);
+        text-align: center;
+        .lineHeight(30);
+        .marginRight(5);
+      }
+      img{
+        .width(26);
+        .height(26);
+        .marginTop(2);
+      }
+    }
+  }
+  .noMessageImg{
+    .width(120);
+    .height(120);
+    margin:auto;
+    .marginTop(220);
+    display:block;
+  }
+  .noMessageText{
+    .marginTop(40);
+    color:#a5a5a5;
+    .fontSize(24);
+    width:100%;
+    text-align: center;
+  }
+  .line{
+    .marginTop(16);
+    .paddingLeft(30);
+    border-bottom: 1px solid #E7E7E7;
+  }
+}

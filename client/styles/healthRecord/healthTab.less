@@ -1,0 +1,30 @@
+@import "../base/base";
+
+.health_tab {
+  .height(150);
+  background: #FFFFFF;
+  .lineHeight(150);
+  .paddingTop(20);
+  .paddingBottom(20);
+  .left {
+    .marginLeft(30);
+    .fontSize(28);
+    .lineHeight(55);
+    .name {
+      color: #A5A5A5;
+    }
+    .value {
+      color: #676767;
+    }
+  }
+  .right {
+    text-align: right;
+    .paddingRight(30);
+    .lineHeight(110);
+    .fontSize(26);
+    color: #A5A5A5;
+  }
+  &:not(:first-child) {
+    border-top: 1px solid @globalBorderColor;
+  }
+}

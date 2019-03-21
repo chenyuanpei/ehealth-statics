@@ -1,0 +1,70 @@
+@import "../../base/base";
+
+
+#healthReportWeeklyList {
+    .no-data{
+      .fontSize(28);
+      color:#676767;
+      text-align: center;
+      position: absolute;
+      width:100%;
+      top:50%;
+      .marginTop(-14);
+    }
+    .report-tab{
+      .height(80);
+      background: #fff;
+      .displayFlex();
+      list-style:none;
+      flex-wrap:nowrap;
+      justify-content:space-between;
+      li{
+        list-style:none;
+        width:49%;
+        text-align:center;
+        span{
+          color:#a5a5a5;
+          .fontSize(28);
+          .paddingLeft(2);
+          .paddingRight(2);
+          .height(50);
+          .paddingTop(15);
+          .lineHeight(60);
+          display:inline-block;
+        }
+        .bp-font{
+          border-bottom:1px solid #00d5bf;
+          color:#00d5bf;
+        }
+        .bs-font{
+          border-bottom:1px solid #7d9bea;
+          color:#7d9bea;
+        }
+      }
+    }
+    .panal {
+      position: absolute;
+      width:100%;
+      .top(80);
+      bottom:0;
+      left:0;
+        .title {
+            .fontSize(24);
+            color: #93929A;
+            .height(55);
+            .lineHeight(55);
+            .paddingLeft(30);
+        }
+        & > div{
+            border-bottom: 1px solid @globalBorderColor;
+        }
+        & > div:last-child {
+            border-bottom: 0;
+        }
+    }
+    .no_data {
+        text-align: center;
+        position: relative;
+        .top(180);
+    }
+}

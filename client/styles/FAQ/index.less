@@ -1,0 +1,107 @@
+@import "../base/base";
+
+.faqList {
+  > .title {
+    .height(80);
+    .lineHeight(80);
+    .paddingLeft(80);
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    position: relative;
+    > .text {
+      display: inline-block;
+      vertical-align: middle;
+      color: #b6b6b6;
+      .fontSize(32);
+    }
+    > .img {
+      position: absolute;
+      .left(30);
+      .top(24);
+      .lineHeight(32);
+      display: inline-block;
+      vertical-align: middle;
+      .width(32);
+      .height(32);
+    }
+  }
+  > .list {
+    background-color: #fff;
+    overflow: hidden;
+    .faq {
+      .name {
+        color: #333;
+        .fontSize(28);
+        max-width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &.tab:not(:first-child):after {
+        border-top-color: #d8d8d8;
+      }
+      &.tab:last-child:before {
+        border-bottom-color: #d8d8d8;
+        .borderBottomWidth(1);
+        border-bottom-style: solid;
+        overflow: hidden;
+        content: "";
+        height: 0;
+        position: absolute;
+        bottom: 0;
+        z-index: 3;
+        .left(30);
+        right: 0;
+      }
+    }
+  }
+  > .action {
+    .height(100);
+    .lineHeight(100);
+    text-align: center;
+    background-color: #fff;
+    > .bu {
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      color: #A5A5A5;
+      .fontSize(28);
+      > img {
+        .width(26);
+        .height(26);
+        display: inline-block;
+        vertical-align: middle;
+        &.to {
+          transform: rotate(-90deg)
+        }
+        &.fo {
+          transform: rotate(90deg)
+        }
+      }
+    }
+  }
+}
+
+.fqaInfo {
+  > .title {
+    .height(80);
+    .lineHeight(80);
+    border-bottom-color: #d8d8d8;
+    .borderBottomWidth(1);
+    border-bottom-style: solid;
+    .marginLeft(30);
+    .paddingLeft(32);
+    .fontSize(32);
+    color: #000;
+    position: relative;
+  }
+
+  > .content {
+    .marginLeft(30);
+    .marginTop(30);
+    .fontSize(28);
+    color: #000;
+    > p {
+      .lineHeight(42);
+    }
+  }
+}

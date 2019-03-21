@@ -1,0 +1,166 @@
+@import "../base/base";
+.m-weight-physique-wrap{
+  min-height:100vh;
+  background: #fff;
+  position: relative;
+  .m-weight-physique-top-img{
+    text-align: center;
+    .paddingTop(30);
+    img{
+      .width(200);
+      .height(200);
+    }
+
+  }
+  .m-weight-physique-top-text{
+    text-align: center;
+    .fontSize(32);
+    font-weight:bold;
+    color:#999;
+  }
+  .m-weight-physique-chart{
+    margin:0 auto;
+    .marginTop(40);
+    border-style:solid;
+    border-image: -webkit-linear-gradient(#ffc142 , #1eabe1,#ffc142) 30 30 30;
+    border-image: -moz-linear-gradient(#ffc142 , #1eabe1,#ffc142) 30 30 30;
+    border-image: linear-gradient(#ffc142 , #1eabe1,#ffc142) 30 30 30;
+    .borderWidth(6);
+    border-right:0;
+    border-top:0;
+    border-bottom:0;
+    .width(560);
+    .height(610);
+    position: relative;
+    .ico-left-top{
+      .width(20);
+      .height(20);
+      position: absolute;
+      top:0;
+      .left(-36);
+      background: url("../../../static/images/weight/icon-plus.png") no-repeat left top;
+      -webkit-background-size:100% 100%;
+      background-size:100% 100%;
+    }
+    .ico-left-bottom{
+      .width(20);
+      .height(20);
+      position: absolute;
+      .bottom(-30);
+      .left(-36);
+      background: url("../../../static/images/weight/icon-less.png") no-repeat left top;
+      -webkit-background-size:100% 100%;
+      background-size:100% 100%;
+    }
+    .ico-right-bottom{
+      .width(20);
+      .height(20);
+      position: absolute;
+      .bottom(-30);
+      .right(0);
+      background: url("../../../static/images/weight/icon-plus.png") no-repeat left top;
+      -webkit-background-size:100% 100%;
+      background-size:100% 100%;
+    }
+    .left-title{
+      .width(30);
+      .fontSize(24);
+      color:#a5a5a5;
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      .left(-36);
+    }
+    .bottom-title{
+      .bottom(-40);
+      width:100%;
+      position: absolute;
+      left:0;
+      text-align: center;
+      .fontSize(24);
+      color:#a5a5a5;
+    }
+    .box {
+      .paddingLeft(50);
+      .paddingRight(70);
+      text-align: center;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-box-pack: justify;
+      -webkit-box-align: center;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+
+      img{
+        .width(120);
+        .height(120);
+        .marginBottom(10);
+      }
+      .m-physique-title{
+        color:#a5a5a5;
+        .fontSize(24);
+        .height(24);
+        .lineHeight(24);
+      }
+      .m-title-active{
+        color:#20a0ff;
+        .fontSize(24);
+      }
+    }
+    .top,.middle,.bottom {
+      .paddingBottom(30);
+      width: 100%;
+      display: -webkit-box;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-box-pack: justify;
+      -webkit-box-align: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top,.middle,.bottom,.left,.center,.right {
+      -webkit-box-flex: 0;
+      flex-basis: auto;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex: 0 0 auto;
+    }
+    .top,.left {
+      -webkit-box-ordinal-group: 1;
+      order: 1;
+    }
+    .middle,.center {
+      -webkit-box-ordinal-group: 2;
+      order: 2;
+    }
+    .bottom,.right {
+      -webkit-box-ordinal-group: 3;
+      order: 3;
+    }
+  }
+  .m-weight-physique-chart:after{
+    position: absolute;
+    bottom:0;
+    .left(-6);
+    content:'.';
+    display: block;
+    .height(6);
+    .width(566);
+    overflow: hidden;
+    background: -webkit-linear-gradient(left, #ffc142 , #1eabe1,#ffc142); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #ffc142 , #1eabe1,#ffc142); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #ffc142 , #1eabe1,#ffc142); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #ffc142 , #1eabe1,#ffc142); /* 标准的语法 */
+
+  }
+
+}
+

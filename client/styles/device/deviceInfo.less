@@ -1,0 +1,150 @@
+@import "../base/base";
+/*血压计流量统计失败*/
+.expireTBox{
+  text-align: left;
+  .marginTop(30);
+  .marginLeft(60);
+  .marginRight(60);
+  margin-bottom: 0;
+  span{
+    display: block;
+    width: 100%;
+    .fontSize(28);
+    .lineHeight(40);
+    color: #676767;
+    font-family: PingFangSC-Regular, Arial, SimSun;
+  }
+}
+.m-user-tab-wrap{
+  position: absolute;
+  .right(40);
+  .top(0);
+}
+.m-public-device-text{
+  .fontSize(24);
+  color:#a5a5a5;
+  .paddingTop(20);
+  .paddingLeft(30);
+  .paddingRight(30);
+  .paddingBottom(40);
+  .lineHeight(36);
+}
+.m-tab-val-wrap{
+    display: inline-block;
+  }
+.device_info {
+  height: 100%;
+  width: 100%;
+
+  .m-version-update{
+    padding-right:1rem;
+    background:url('../../../static/images/device/icon-equipment-new.png') no-repeat right center;
+    background-size: auto 25%
+  }
+  .device_head {
+    .height(180);
+    width: 100%;
+    background: white;
+    .device_head_left {
+      float: left;
+      .width(244);
+      height: 100%;
+      .device_image {
+        .height(150);
+        .width(150);
+        .paddingTop(10);
+        .paddingLeft(34);
+
+      }
+    }
+    .device_head_right {
+      .paddingLeft(38);
+      .paddingTop(56);
+      .device_title {
+        white-space:nowrap;
+        position: relative;
+        .width(340);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #676767;
+        .fontSize(28);
+        .paddingRight(40);
+        .edit_icon {
+          position: absolute;
+          .right(0);
+          img {
+            .width(25);
+            .height(24);
+          }
+        }
+      }
+      .battery_image {
+        .paddingTop(0);
+        .connected {
+          .marginLeft(20);
+          .height(34);
+          .width(92);
+          .top(7.5);
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .device_list {
+    .paddingTop(20)
+  }
+
+  .delete_div {
+    .paddingTop(20);
+    .height(80);
+    margin: 0 auto;
+  }
+
+  .delete_btn {
+    .width(550) !important;
+    .fontSize(28) !important;
+  }
+  .part_two {
+    .paddingTop(20);
+  }
+
+  .del_btn {
+    text-align: center;
+    .paddingLeft(30);
+    .paddingRight(30);
+    color: red;
+    background-color: #ffffff;
+    .paddingTop(20);
+    .paddingBottom(20);
+    .fontSize(28);
+    .countdown_box{
+      display: none;
+    }
+  }
+  .time_btn{
+    text-align: left;
+    position: relative;
+    .countdown_box{
+      display: block;
+      position: absolute;
+      .right(30);
+      .top(0);
+      .height(80);
+      .lineHeight(80);
+      color:#676767;
+      .fontSize(24);
+      .countdown_time{
+        display: inline;
+        color:#ef4f4f;
+      }
+    }
+  }
+  .confirm {
+    .paddingLeft(46);
+    .paddingRight(46);
+    .fontSize(28);
+    color: #676767;
+    text-align: center;
+  }
+}

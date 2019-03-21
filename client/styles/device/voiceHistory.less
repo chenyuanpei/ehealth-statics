@@ -1,0 +1,69 @@
+@import "../base/base";
+
+.deviceVoiceHistoryPage {
+
+  .paddingBottom(100);
+
+  @padding: 30;
+
+  .timeBar {
+    .padding(0, @padding);
+    .fontSize(24);
+    .lineHeight(55);
+    color: #A5A5A5;
+  }
+
+  .voiceBar {
+    position: relative;
+    .padding(0, @padding);
+    .height(80);
+    background: #FFF;
+    .fontSize(28);
+    color: #676767;
+
+    > div {
+      .lineHeight(80);
+      height: 100%;
+      float: left;
+
+      &:last-child {
+        position: absolute;
+        .right(@padding);
+        top: 0;
+        height: 100%;
+      }
+    }
+
+    .iconVoice {
+      .margin(0, 20);
+      .width(30);
+      background: center center url('../../../static/images/device/icon-historical-voice.png') no-repeat;
+      .backgroundSize(30, 30);
+    }
+
+    .iconVoicePoint {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        .top(-15);
+        .left(15);
+        width: 100%;
+        height: 100%;
+        background: center center url('../../../static/images/device/icon-historical-vioce-point.png') no-repeat;
+        .backgroundSize(10, 10);
+      }
+    }
+
+    .timeSpan {
+      .fontSize(20);
+      color: #A5A5A5;
+    }
+
+    & + .voiceBar {
+      &:after {
+        .setTopLine();
+      }
+    }
+  }
+}

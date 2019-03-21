@@ -1,0 +1,9 @@
+// 血压最新记录（7条）
+export const BP_LAST_RECORDS_REQUEST = Symbol('BP_LAST_RECORDS_REQUEST')
+export const BP_LAST_RECORDS_SUCCESS = Symbol('BP_LAST_RECORDS_SUCCESS')
+export const BP_LAST_RECORDS_FAILURE = Symbol('BP_LAST_RECORDS_FAILURE')
+
+// 获取成员本周血压测量活跃情况（测量总次数，正常次数，异常次数）
+export const BP_ACTIVE_DEGREE_REQUEST = Symbol('BP_ACTIVE_DEGREE_REQUEST')
+export const BP_ACTIVE_DEGREE_SUCCESS = Symbol('BP_ACTIVE_DEGREE_SUCCESS')
+export const BP_ACTIVE_DEGREE_FAILURE = Symbol('BP_ACTIVE_DEGREE_FAILURE')

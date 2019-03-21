@@ -1,0 +1,48 @@
+@import "../base/base";
+
+.upgradePage {
+  background: #FFFFFF;
+  .padding(30);
+  .fontSize(28);
+  color: #676767;
+  height: 100%;
+  position: absolute;
+  .upgradeContext {
+    margin-left: 12px;
+    margin-right: 12px;
+    ol {
+      list-style-type:none;
+      counter-reset:sectioncounter;
+      li:before {
+        position: absolute;
+        left: 16px;
+        content: counter(sectioncounter) "." ;
+        counter-increment:sectioncounter;
+      }
+    }
+  }
+  .userInformation {
+    .fontSize(22);
+    .paddingTop(30);
+    .context {
+      margin-left: 12px;
+      margin-right: 12px;
+      ol {
+        list-style-type:none;
+        counter-reset:sectioncounter;
+        li:before {
+          position: absolute;
+          left: 16px;
+          content: counter(sectioncounter) ;
+          counter-increment:sectioncounter;
+        }
+      }
+    }
+  }
+  .pageBottom.btn {
+    .weui_btn_primary {
+      color: #9B9B9B;
+      background-color: #E7E7E7 !important;
+    }
+  }
+}

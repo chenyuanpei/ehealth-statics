@@ -1,0 +1,55 @@
+@import "../base/base";
+.m-record-tab-wrap{
+  background:#fff;
+}
+.m-record-tab {
+  width: auto;
+  .height(130);
+  .lineHeight(130);
+  background: #FFFFFF;
+  .marginLeft(30);
+  #div {
+    float: left;
+  }
+  .m-record-tab-img {
+    .marginLeft(30);
+    .width(32);
+    .height(32);
+    display: inline-block;
+    color: #676767;
+    .fontSize(28);
+  }
+  .m-record-tab-name {
+    .marginLeft(30);
+    .fontSize(28);
+    color: #676767;
+  }
+  .m-record-tab-data{
+    .marginLeft(30);
+    color:#676767;
+    .fontSize(24);
+    span{
+      .marginRight(10);
+      .fontSize(30);
+    }
+    span:last-child{
+      .fontSize(24)
+    }
+  }
+  .m-record-tab-right {
+    text-align: right;
+    .paddingRight(30);
+    .fontSize(20);
+    color: #A5A5A5;
+    span{
+      img{
+        .width(26);
+        .height(26);
+        vertical-align:-2px;
+      }
+    }
+  }
+  &:not(:first-child) {
+    border-top: 1px solid @globalBorderColor;
+  }
+}

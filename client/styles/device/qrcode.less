@@ -1,0 +1,40 @@
+@import "../base/base";
+
+.qrcodeBox {
+  .qrcode {
+    position: fixed;
+    left: 50%;
+    top:50%;
+    .height(560);
+    .width(440);
+    .marginTop(-300);
+    .marginLeft(-250);
+    margin-bottom: 0;
+    margin-right: 0;
+    background: #ffffff;
+    z-index: 11;
+    .borderRadius(5);
+    .padding(30);
+    .text {
+      text-align: center;
+      .fontSize(28);
+      color: #9B9B9B;
+      .lineHeight(38);
+    }
+    .warn{
+      .marginTop(10);
+    }
+    .img {
+      .marginTop(30);
+      .marginBottom(0);
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+      img {
+        .width(400);
+        .height(400);
+        display: inline-block;
+      }
+    }
+  }
+}

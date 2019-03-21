@@ -1,0 +1,2 @@
+export const TOPIC_BS_DETAIL_CLICK = 'TOPIC_BS_DETAIL_CLICK'
+

@@ -1,0 +1,257 @@
+rem(a)
+  (a / (750/640*50))rem
+
+rem3(a)
+  (a / 50)rem
+
+body
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+rem2(a)
+  a / 50 rem
+
+//*
+//  font-weight lighter
+
+*
+  box-sizing border-box
+  font-weight normal;
+
+chart-bg = #0cabe9
+chart-line = #d6d7da
+lineColor = #D9D9D9
+fc-white = #fff
+fc-999 = #a5a5a5
+fc-333 = #676767
+fc-done = #fbb41a
+fc-undone = #c0c0c0
+.sport-page
+  background:#ffffff;
+  .m-device-bind-tips
+    height rem(80)
+    line-height rem(80)
+    padding-left rem(20)
+    background #6abfff
+    color #fff
+    font-size rem(28)
+  .m-close
+    color #fff
+    font-size rem(66)
+    position absolute
+    right rem(15)
+    top rem(-4)
+    z-index 40
+    transform rotate(45deg)
+    -ms-transform rotate(45deg) 	/* IE 9 */
+    -moz-transform rotate(45deg) 	/* Firefox */
+    -webkit-transform rotate(45deg) /* Safari 和 Chrome */
+    -o-transform rotate(45deg)  	/* Opera */
+  .sport-chart
+    width 100%
+    height rem(500)
+    /*border-bottom 1px solid lineColor*/
+    background-color chart-bg
+
+    .title
+      padding rem(50) 0 rem(50) 0
+      width 100%
+      text-align center
+      color fc-white
+      font-size rem(32)
+      line-height rem(32)
+    .null
+      padding rem3(110) 0 0 0
+      height rem(368)
+      width 100%
+      text-align center
+      font-size rem(32)
+      line-height rem(32)
+      color fc-white
+      opacity 0.6
+
+    .chart-info
+      position relative
+      width 100%
+      height rem(368)
+      display -webkit-box
+      display -moz-box
+      display -ms-flexbox
+      display -webkit-flex
+      display flex
+      flex-direction column
+      justify-content flex-end
+      -moz-justify-content flex-end
+      -ms-justify-content flex-end
+      -webkit-justify-content flex-end
+      .mark-txt
+        position absolute
+        z-index 0
+        bottom 0
+        left 50%
+        margin-left rem(-335)
+        width rem(670)
+        /*borde-bottom 1px solid chart-line*/
+        font-size rem(24)
+        color fc-white
+        text-indent rem(-24)
+        line-height rem(40)
+      .mark-line
+        position absolute
+        height 1px
+        z-index 0
+        bottom 0
+        left 50%
+        margin-left rem(-335 * 2)
+        background-color chart-line
+        width rem(670 * 2)
+        transform scale(0.5)
+      .chart-tips
+        position absolute
+        z-index 10
+        top 0
+        left 0
+        width rem(76)
+        height rem(34)
+        color #0cabe9
+        background-color fc-white
+        font-size rem(24)
+        text-align center
+        line-height rem(34)
+        border-radius rem(4)
+      svg
+        position: absolute;
+        top: 0;
+        margin 0 auto
+
+      .tips
+        padding rem(30) rem3(20)
+        display -webkit-box
+        display -moz-box
+        display -ms-flexbox
+        display -webkit-flex
+        display flex
+        justify-content space-between
+        font-size rem(24)
+        color fc-white
+      .tips > * {
+        display block
+      }
+
+  .step-count, .result
+    overflow hidden
+    margin 0 auto
+    padding rem(30) 0
+    width rem(670)
+  //width rem2(580)
+  .step-count
+    position relative
+    height rem(200)
+    //height rem2(170)
+    /*border-bottom 1px solid lineColor*/
+    &:after
+      content ''
+      height 1px
+      width 200%
+      position absolute
+      left -50%
+      bottom 0
+      background-color lineColor
+      transform scale(0.5)
+    .title
+      display -webkit-box
+      display -moz-box
+      display -ms-flexbox
+      display -webkit-flex
+      display flex
+      justify-content space-between
+      -moz-justify-content space-between
+      -ms-justify-content space-between
+      -webkit-justify-content space-between
+      font-size rem(28)
+      color fc-999
+      margin-bottom rem(20)
+      div
+        display -webkit-box
+        display -moz-box
+        display -ms-flexbox
+        display -webkit-flex
+        display flex
+        align-items center
+
+  .uncompleted
+    color fc-undone
+
+  .achieve-goal
+    color fc-done
+
+  .content
+    color fc-333
+    .step-value
+      font-size rem(80)
+      margin-right rem(10)
+      //font-weight lighter
+    .step-unit
+      font-size rem(28)
+
+  .unit
+    font-size rem(24)
+
+  .result
+    height rem(190)
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    justify-content space-between
+    -moz-justify-content space-between
+    -ms-justify-content space-between
+    -webkit-justify-content space-between
+    flex-direction column
+    .item
+      display -webkit-box
+      display -moz-box
+      display -ms-flexbox
+      display -webkit-flex
+      display flex
+      justify-content space-between
+      -moz-justify-content space-between
+      -ms-justify-content space-between
+      -webkit-justify-content space-between
+      align-items center
+      font-size rem(32)
+      color fc-333
+      .title
+        margin-right rem(40)
+      .number
+        margin-right rem(10)
+      .tips
+        font-size rem(24)
+        color fc-999
+
+  .icon-sport-steps, .icon-sports-uncompleted, .icon-sports-achieve-goal
+    overflow visible
+    margin-right rem(10)
+
+  .icon-sport-steps
+    width rem(26)
+    height rem(26)
+
+  .icon-sports-uncompleted, .icon-sports-achieve-goal
+    width rem(30)
+    height rem(30)
+
+  .icon-statistics
+    overflow visible
+    position absolute
+    top rem(20)
+    right rem(20)
+    width rem(60)
+    height rem(60)
+
+  .fs-lighter
+    font-weight lighter
+

@@ -1,0 +1,216 @@
+@import "../base/base";
+
+.newbie-task {
+  .height(1972);
+  width:100%;
+  background: url("../../../static/images/newbieTask/bg.jpg");
+  background-size:100% 100%;
+  position:absolute;
+  //border-top:0.01rem solid transparent;
+  .tips{
+    .marginTop(405);
+    .marginLeft(12);
+    .height(46);
+    .width(523);
+    .lineHeight(46);
+    background: #72030B;
+    color: #ffffff;
+    .borderRadius(23);
+    .fontSize(24);
+    text-align: center;
+  }
+  .task-div{
+    .marginTop(16);
+    width:100%;
+    .height(379);
+    //justify-content:space-around;
+    .task-item{
+      .height(379);
+      .width(192);
+      .marginLeft(15);
+    }
+    .task-item-y{
+      background: url("../../../static/images/newbieTask/complete-bg-y.png");
+      background-size:100% 100%;
+    }
+    .task-item-g{
+      background: url("../../../static/images/newbieTask/complete-bg-g.png");
+      background-size:100% 100%;
+    }
+    .task-title{
+      .fontSize(24);
+      text-align: center;
+      .marginTop(47);
+      .marginLeft(-5);
+    }
+    .task-title-y{
+      color:#764108;
+    }
+    .task-title-g{
+      color:#C8C7C7;
+    }
+    .task-tips{
+      .fontSize(30);
+      text-align: center;
+      .lineHeight(38);
+    }
+    .task-tips-y{
+      color:#1d1d1d;
+      .marginTop(90);
+    }
+    .task-tips-g{
+      color:#e2e2e2;
+      .marginTop(74);
+    }
+    .task-btn1{
+      background: url("../../../static/images/newbieTask/btn-y2.png");
+      background-size:100% 100%;
+      margin:auto;
+      .marginTop(35);
+      .width(156);
+      .height(58);
+      .lineHeight(58);
+      .fontSize(24);
+      color:#000000;
+      text-align: center;
+    }
+    .task-btn2{
+      background: url("../../../static/images/newbieTask/btn-y2.png");
+      background-size:100% 100%;
+      margin:auto;
+      .marginTop(75);
+      .width(156);
+      .height(58);
+      .lineHeight(58);
+      .fontSize(24);
+      color:#000000;
+      text-align: center;
+    }
+  }
+  .btn{
+    .width(382);
+    .height(91);
+    .lineHeight(91);
+    .fontSize(33);
+    text-align: center;
+    margin:auto;
+    .marginTop(30);
+  }
+  .btn-y{
+    background: url("../../../static/images/newbieTask/btn-y.png");
+    background-size:100% 100%;
+    color:#590209;
+  }
+  .btn-g{
+    background: url("../../../static/images/newbieTask/btn-g.png");
+    background-size:100% 100%;
+    color:#C6C6C6;
+  }
+  .people-div{
+    margin:auto;
+    .marginTop(46);
+    .width(540);
+    .height(110);
+    .fontSize(33);
+    text-align: center;
+    color:#ffffff;
+    text-shadow:1px 1px 1px #920107, -1px -1px 1px #920107,-1px 1px 1px #920107, 1px -1px 1px #920107;
+  }
+  .num-div{
+    .height(62);
+    background:#920107;
+    .margin(0,5);
+    .borderRadius(5);
+    color:#000000;
+    .fontSize(50);
+    .paddingRight(5);
+    display: inline-flex;
+    text-shadow: none;
+  }
+  .num-item{
+    background: url("../../../static/images/newbieTask/num-bg.png");
+    background-size:100% 100%;
+    .width(32);
+    .height(52);
+    .lineHeight(52);
+    .marginLeft(5);
+    .marginTop(7);
+  }
+  .num-item-end{
+    background: url("../../../static/images/newbieTask/num-bg.png");
+    background-size:100% 100%;
+    .width(32);
+    .height(52);
+    .lineHeight(52);
+    .marginLeft(5);
+    .marginRight(5);
+    .marginTop(7);
+  }
+  .task-list{
+    //border-top:0.01rem solid transparent;
+    overflow: hidden
+  }
+  .opacity-div{
+    .height(246);
+    .width(600);
+    background: #000000;
+    opacity: 0.7;
+    .borderRadius(10);
+    .marginTop(13);
+    position: absolute;
+    left:50%;
+    .marginLeft(-300);
+  }
+  .list-div{
+    .height(201);
+    .width(600);
+    margin:auto;
+    .marginTop(13+25);
+    .marginBottom(50);
+    text-align: left;
+    color:#f5f5f5;
+    .lineHeight(41);
+    .fontSize(24);
+    position: relative;
+    overflow: hidden;
+    //@-webkit-keyframes anim{
+    //  0% {top: 0;}
+    //  100% {.top(-201)}
+    //}
+    .scroll-div{
+      //-webkit-animation: anim 2s linear 1;
+      position: absolute;
+    }
+    .list-item{
+      .marginLeft(25);
+      .width(521);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .rule-div{
+    background:#ff3943;
+    .marginTop(30);
+    //border-top:0.01rem solid transparent;
+    .padding(0,42);
+    .title{
+      color:#ffffff;
+      .fontSize(33);
+      .marginTop(39);
+      font-weight: bold;
+    }
+    .content{
+      color:#ffffff;
+      .fontSize(22);
+      .marginTop(19);
+    }
+    .bottom{
+      color:#ff878d;
+      .fontSize(18);
+      .paddingBottom(7);
+      .paddingTop(66);
+      text-align: center;
+    }
+  }
+}

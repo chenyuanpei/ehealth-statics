@@ -1,0 +1,101 @@
+@import "../base/base";
+.bgStyle{
+  background: #fff;
+}
+.m-hide{
+  display: none;
+}
+.m-device-tips{
+  .paddingLeft(20);
+  .paddingTop(20);
+  .fontSize(24);
+  color:#676767;
+}
+.asBox {
+  height: 100%;
+  .asBText {
+    .fontSize(24);
+    color: #a5a5a5;
+    .paddingTop(11);
+    .paddingBottom(11);
+    .paddingLeft(30);
+  }
+}
+.linkmans{
+  .buttonTextStyle{
+    .lineHeight(90);
+  }
+}
+.m-pup-panel-block{
+  position:absolute;
+  z-index:999;
+  display:block;
+  width:100%;
+  height:100%;
+  background: #000000;
+  opacity: 0.2;
+}
+.m-pup-ico{
+  .width(220);
+  .paddingTop(40);
+  .height(100);
+  position: absolute;
+  .top(20);
+  .right(20);
+  z-index:1000;
+  color:#676767;
+  .fontSize(28);
+  text-align:center;
+  background:url("../../../static/images/cloud.png") no-repeat center center;
+  background-size:100% 100%;
+  span{
+    display: block;
+  }
+}
+.m-pup-panel-none{
+  display: none;
+}
+.memberBtn {
+  width: 100%;
+  height: 100%;
+  .top{
+    .paddingTop(20);
+  }
+  .panal {
+    &:last-child{
+      .paddingBottom(133);
+    }
+    .title {
+      .fontSize(24);
+      color: #93929A;
+      .height(55);
+      .lineHeight(55);
+      .paddingLeft(30);
+      border-bottom: 1px solid @globalBorderColor;
+    }
+    .bgStyle{
+      position: relative;
+      z-index: 1;
+      &:not(:last-child):after{
+        overflow: hidden;
+        content: "";
+        border-bottom: 1px solid @globalBorderColor;
+        background: #fff;
+        .height(0);
+        position: absolute;
+        bottom:0;
+        z-index: 100;
+        .left(30);
+        .right(0);
+      }
+    }
+
+  }
+  .confirm {
+    .paddingLeft(46);
+    .paddingRight(46);
+    .fontSize(28);
+    color: #676767;
+    text-align: center;
+  }
+}

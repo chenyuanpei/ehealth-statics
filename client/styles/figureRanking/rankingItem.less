@@ -1,0 +1,47 @@
+@import "../base/base750";
+.ranking-item{
+  background:#303030;
+  .height(120);
+  width:100%;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-align-items: center;
+  align-items: center;
+  .fontSize(28);
+  color:#ffffff;
+  border-bottom:1px solid #000000;
+  .num{
+    .marginLeft(30);
+    text-align: center;
+  }
+  .head-img{
+    .marginLeft(30);
+    .height(64);
+    .width(64);
+    border-radius:50%;
+    background:#ffffff;
+  }
+  .name{
+    .marginLeft(60);
+    .width(140);
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+  }
+  .score{
+    color:#f6a623;
+    .marginLeft(52);
+    .width(80);
+  }
+  .heart-img{
+    .width(36);
+    .height(36);
+    .marginLeft(84);
+  }
+  .heart-num{
+    color:#ffffff;
+    .marginLeft(12);
+  }
+}

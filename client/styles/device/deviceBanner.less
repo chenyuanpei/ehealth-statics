@@ -1,0 +1,48 @@
+@import "../base/base";
+
+.deviceBanner {
+  background: #FFFFFF;
+  .height(180);
+  &:not(:first-child) {
+    border-top: 1px solid @globalBorderColor;
+  }
+  .deviceImg {
+    .paddingLeft(20);
+    .paddingRight(50);
+    .paddingTop(20);
+    img {
+      .height(150);
+      .width(150);
+    }
+  }
+  .deviceUser {
+    .paddingTop(40);
+    .paddingBottom(40);
+    .fontSize(28);
+    color: #676767;
+    div {
+      .lineHeight(100);
+      .height(100);
+    }
+
+    .connected {
+      .marginLeft(10);
+      .height(34);
+      .width(92);
+      .paddingTop(32);
+      position: absolute;
+    }
+  }
+  .rightArrow {
+    .paddingTop(40);
+    .paddingBottom(40);
+    text-align: right;
+    .paddingRight(30);
+    .lineHeight(100);
+    img{
+      .width(30);
+      .height(30);
+      vertical-align:-2px;
+    }
+  }
+}

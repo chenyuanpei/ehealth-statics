@@ -1,0 +1,224 @@
+@import "../base/base";
+
+.bs_trend_body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  .m-month-bottom-text{
+    position: absolute;
+    width:100%;
+    .bottom(24);
+    color:#fff;
+    .fontSize(24);
+    text-align: center;
+    .m-first-day{
+      position:absolute;
+      .left(55);
+      .width(60);
+      .bottom(0);
+    }
+    .m-last-day{
+      position: absolute;
+      .right(30);
+      .width(60);
+      .bottom(0);
+    }
+    .m-mid-day{
+      position: absolute;
+      left:50%;
+      .width(60);
+      .marginLeft(-25);
+      bottom:0;
+    }
+  }
+  .m-meal-peroid{
+    .height(80);
+    background: #fff;
+    li{
+      list-style: none;
+      text-align: center;
+      float: left;
+      .height(80);
+      .width(91);
+      .fontSize(20);
+      color:#a5a5a5;
+      span{
+        display: inline-block;
+        margin:0 auto;
+        .height(40);
+        .lineHeight(40);
+        .marginTop(20);
+
+      }
+    }
+    li:nth-child(2n+1){
+      .width(92);
+    }
+  }
+  .trend_top {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .trend_chart {
+      //height: 70%;
+      //.height(485);
+      width: 100%;
+      //background:#6d8fe7;
+      .bgLinear(#008DE7, #3B55E7);
+      // .bgLinear(#3EB3DD, #2DD6B9);
+      .trend_date {
+      }
+      .trend_bp_info {
+        //.height(60);
+      }
+      .trend_chart_bp {
+        position: relative;
+        //height: 100%;
+        //.height(425);
+        //.bottom(60);
+      }
+    }
+    .trend_record {
+      //height: 30%;
+      .marginBottom(96);
+    }
+  }
+.color-mealPeroid-active{
+  color:#6d8fe7!important;
+  span{
+    display: inline-block;
+    margin:0 auto;
+    .height(40);
+    .lineHeight(40);
+    .paddingLeft(5);
+    .paddingRight(5);
+    border-bottom:2px solid #6d8fe7;
+    .marginTop(20);
+
+  }
+}
+  .date_button {
+    z-index: 2;
+    position: fixed;
+    .bottom(0);
+    background: #fdfdfd;
+    border-top: 1px solid #e3e3e3;
+    width: 100%;
+    .lineHeight(96);
+    .date_button_area {
+      .marginLeft(20);
+      .marginRight(20);
+      .marginTop(16);
+      .marginBottom(18);
+      border:1px solid #848484;
+      background-color: #fff;
+      border-radius: 5px;
+      .width(600);
+      overflow: hidden;
+      ul{
+        .width(605);
+      }
+      li{
+        float: left;
+        list-style: none;
+        .width(300);
+        z-index: 2;
+        text-align: center;
+        .lineHeight(60);
+        box-sizing: border-box;
+        .fontSize(24);
+        overflow: hidden;
+        color: #848484;
+        vertical-align: middle;
+        border-right:1px solid #848484;
+        &:last-child{
+          border:0;
+        }
+      }
+      .btn_on{
+        color: #fff;
+        background-color: #848484;
+      }
+
+    }
+
+  }
+
+}
+
+.historyBsInfo {
+  position: relative;
+  box-sizing: border-box;
+  border: 0;
+  .paddingRight(40);
+  .height(150);
+  background: #ffffff;
+  &:after{
+    overflow: hidden;
+    border-bottom: 1px solid #f1f1f1;
+    content: "";
+    background: #fff;
+    height:0;
+    width:100%;
+    position: absolute;
+    bottom:0;
+    .left(30);
+  }
+  .historyText {
+    position: absolute;
+    left: 0;
+    .width(155);
+    .lineHeight(150);
+    text-align: center;
+
+    span {
+      position: absolute;
+      display: block;
+      .fontSize(28);
+      top: 100%;
+      .left(0);
+      width: 100%;
+    }
+  }
+
+  .currentValBox {
+
+    height: 100%;
+
+    .texRow {
+      .paddingTop(49) !important;
+      & > span {
+        display: block;
+        &:first-child {
+          .fontSize(28) !important;
+        }
+      }
+    }
+    .texRow1{
+      .paddingTop(28);
+      .paddingLeft(27);
+      & > span {
+        .fontSize(24);
+        color:#9B9B9B;
+      }
+      .bs-time{
+        .marginRight(50);
+      }
+      .bs-value{
+        display: block;
+        color:#000;
+        .fontSize(28);
+      }
+    }
+    .historyTime {
+      .lineHeight(150);
+      .fontSize(24);
+      color: #44AFFF;
+      text-align: right;
+      .paddingRight(36);
+    }
+
+
+  }
+
+}

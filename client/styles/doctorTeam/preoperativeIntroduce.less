@@ -1,0 +1,260 @@
+@import "../base/base";
+.m-pre-panel{
+  background: #fff;
+  .m-doctor-team-grey{
+    .fontSize(24);
+    color:#a5a5a5;
+    .paddingTop(10);
+    text-align: center;
+  }
+  .m-loading-alert{
+    text-align: left;
+    .paddingLeft(40);
+    text-align:Justify;
+    .paddingRight(40);
+  }
+  .m-pre-banner{
+    .height(356);
+    position: relative;
+    width:100%;
+    background: url("../../../static/images/doctorTeam/img-doctor-head.png") no-repeat left top;
+    -webkit-background-size:100% auto;
+    background-size:100% auto;
+    .m-opacity-top{
+      background: #000;
+      opacity: 0.5;
+      width:100%;
+      position:absolute;
+      .top(88);
+      .height(180);
+      z-index: 1;
+    }
+    ul{
+      .fontSize(28);
+      color:#fff;
+      list-style:none;
+      width:100%;
+      top:50%;
+      position: absolute;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      z-index: 2;
+      text-align: center;
+      li{
+        .height(40);
+        .lineHeight(40);
+        .paddingTop(2);
+        .paddingBottom(2);
+      }
+    }
+  }
+  .m-pre-tips{
+    text-align: center;
+    .height(60);
+    .lineHeight(60);
+    .fontSize(24);
+    color:#fff;
+    background: #8fcfff;
+  }
+  .m-service-content{
+    .paddingTop(60);
+    .paddingBottom(40);
+  }
+  .m-service-title{
+    .displayFlex();
+    justify-content:center;
+    -moz-justify-content:center;
+    -webkit-justify-content:center;
+    -ms-justify-content:center;
+    .paddingBottom(30);
+    .m-blue-title{
+      .paddingLeft(30);
+      .paddingRight(30);
+      color:#20a0ff;
+      .fontSize(28);
+      .width(120);
+      text-align: center;
+      font-weight:bold;
+    }
+    .m-grey-title{
+      color:#999;
+      .fontSize(28);
+      .paddingLeft(30);
+      .paddingRight(30);
+      font-weight:normal;
+    }
+    .m-service-blue-left{
+      background: url("../../../static/images/doctorTeam/service-img-left-blue.png") no-repeat left center;
+      -webkit-background-size:100% auto;
+      background-size:100% auto;
+      .width(90);
+      .height(40);
+
+    }
+    .m-service-grey-left{
+      background: url("../../../static/images/doctorTeam/service-img-left-grey.png") no-repeat left center;
+      -webkit-background-size:100% auto;
+      background-size:100% auto;
+      .width(90);
+      .height(40);
+
+    }
+    .m-service-blue-right{
+      background: url("../../../static/images/doctorTeam/service-img-right-blue.png") no-repeat left center;
+      -webkit-background-size:100% auto;
+      background-size:100% auto;
+      .width(90);
+      .height(40);
+    }
+    .m-service-grey-right{
+      background: url("../../../static/images/doctorTeam/service-img-right-grey.png") no-repeat left center;
+      -webkit-background-size:100% auto;
+      background-size:100% auto;
+      .width(90);
+      .height(40);
+    }
+  }
+  .m-service-list{
+    width:100%;
+    .displayFlex();
+    justify-content:center;
+    -moz-justify-content:center;
+    -webkit-justify-content:center;
+    -ms-justify-content:center;
+    ul{
+      list-style:none;
+      margin:0 auto;
+    }
+    li{
+      list-style:none;
+      .fontSize(28);
+      font-weight:bold;
+      color: #000;
+      .paddingBottom(20);
+      .height(30);
+      .paddingLeft(52);
+      position: relative;
+      .m-list-ico{
+        position: absolute;
+        left:0;
+        .top(4);
+        .width(32);
+        .height(30);
+        background: url("../../../static/images/doctorTeam/icon-service-click .png") no-repeat left top;
+        background-size:auto 100%;
+      }
+    }
+  }
+  .m-doctor-team-content{
+    .width(540);
+    margin:0 auto;
+
+    img{
+      width:100%;
+      .marginBottom(30);
+    }
+    .m-doctor-team-text{
+      .lineHeight(42);
+      color:#999;
+      .fontSize(28);
+      .paddingBottom(60);
+    }
+  }
+  .m-doctor-team-list{
+    width:100%;
+    color:#666;
+    .paddingBottom(140);
+    .fontSize(28);
+    .m-doctor-team-title{
+      text-align: center;
+    }
+    .m-doctor-team-ul ul{
+      .paddingTop(40);
+      .marginLeft(20);
+      .displayFlex();
+      flex-flow: row wrap;
+      li{
+        list-style: none;
+        .paddingBottom(40);
+        width:33%;
+      }
+      .m-doctor-head{
+        .width(100);
+        .height(100);
+        margin:0 auto;
+        overflow: hidden;
+        -webkit-border-radius:50%;
+        -moz-border-radius:50%;
+        border-radius:50%;
+        img{
+
+          width:100%;
+          height:100%;
+        }
+      }
+      .m-doctor-name{
+        width:100%;
+        .paddingTop(10);
+        text-align: center;
+        overflow: hidden;
+      }
+      .m-doctor-position{
+        .paddingTop(10);
+        width:100%;
+        overflow: hidden;
+        text-align: center;
+      }
+
+    }
+  }
+  .m-doctor-team-bottom{
+    position: fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow: hidden;
+    .height(100);
+    background: #ff4444;
+    .paddingLeft(320);
+  }
+  .m-doctor-team-price-box{
+    .paddingTop(30);
+    position: absolute;
+    left:0;
+    top:0;
+    .height(100);
+    border-top:1px solid #e7e7e7;
+    width:50%;
+    background: #fff;
+    .displayFlex();
+    justify-content:center;
+    -moz-justify-content:center;
+    -webkit-justify-content:center;
+    -ms-justify-content:center;
+    .m-icon-price{
+      text-indent:-999px;
+      overflow: hidden;
+      .width(70);
+      .height(36);
+      background: url("../../../static/images/doctorTeam/icon-sell.png") no-repeat left top;
+      -webkit-background-size:100% auto;
+      background-size:100% auto;
+      .marginRight(20);
+    }
+    .m-price-box{
+      color:#fa9129;
+      .fontSize(36);
+      .height(36);
+      .lineHeight(36);
+    }
+
+  }
+  .m-doctor-buy-button{
+    text-align: center;
+    .height(100);
+    .lineHeight(100);
+    .fontSize(32);
+    color:#fff;
+  }
+}
+

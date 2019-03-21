@@ -1,0 +1,126 @@
+@import "../base/base";
+
+#homePage .members {
+  width: 100%;
+  .height(180);
+  background: #fff;
+  .marginBottom(30);
+  border-bottom:1px solid #d9d9d9;
+  .swiper-slide-active{
+    .memberContainer{
+      .memberHeadimg{
+        .width(100)!important;
+        .height(100)!important;
+        .marginTop(0)!important;
+      }
+      .memberName{
+        white-space:nowrap;
+        text-overflow : ellipsis;
+        .fontSize(30)!important;
+        color:#00d9c6!important;
+      }
+    }
+  }
+  .memberContainer {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    .paddingTop(20);
+
+    /* 头像 */
+    .memberHeadimg {
+      .height(80);
+      .width(80);
+      margin: 0 auto;
+      .marginTop(18);
+      img {
+        border-radius: 50%;
+        width:100%;
+        height:100%;
+      }
+    }
+    /* 添加成员*/
+    .addMember {
+      img {
+        display: none
+      }
+      background-image:url(../../../static/images/btn_add.png);
+      background-size:100% 100%;
+    }
+    /* 昵称 */
+    .memberName {
+      .height(36);
+      .lineHeight(36);
+      .fontSize(24);
+      .marginBottom(5);
+      .marginTop(5);
+      color:#dfdfdf;
+    }
+
+    /* 邀请关注 */
+    .memberInvite {
+      position: absolute;
+      .top(80);
+      .right(30);
+      .width(150);
+      .height(52);
+      background-color: #6495ED;
+      .borderRadius(5);
+      color: #FFF;
+      .lineHeight(52);
+      .fontSize(25);
+      text-align: center;
+
+      .memberInviteCount {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        .fontSize(20);
+        color: #93929A;
+      }
+    }
+
+    .memberInviteing {
+      position: absolute;
+      .top(84);
+      .right(76);
+      .width(46);
+      .height(46);
+      background-image: url(../../../static/images/member/icon_attention.png);
+      background-size: 100% 100%;
+
+      div {
+        position: absolute;
+        .top(46);
+        left: 50%;
+        .transform(translate3d(-50%, 0px, 0px));
+        .fontSize(24);
+        color: #93929A;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .memberPagination {
+    .bottom(26) !important;
+    //.height(29);
+    transition: 0ms;
+    width: 100%;
+    .swiper-pagination-bullet {
+      .height(10) !important;
+      .width(10) !important;
+      .marginLeft(5)!important;
+      .marginRight(5)!important;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #9B9B9B;
+    }
+  }
+}
+
+.white {
+  background: #ffffff;
+}

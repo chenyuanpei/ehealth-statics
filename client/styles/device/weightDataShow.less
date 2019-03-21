@@ -1,0 +1,107 @@
+@import "../base/base";
+.m_public_data_show{
+  .marginLeft(30);
+  .marginRight(30);
+  .marginBottom(40);
+  .borderRadius(8);
+  .minHeight(100);
+  -webkit-box-shadow: 0 0 2px 2px #f3f3f3;
+  -moz-box-shadow: 0 0 2px 2px #f3f3f3;
+  box-shadow: 0 0 2px 2px #f3f3f3;
+  .paddingLeft(20);
+  .paddingRight(20);
+  .m-data-title{
+    .height(120);
+    color:#000;
+    .fontSize(28);
+    text-align: center;
+    .lineHeight(120);
+
+  }
+  .m-data-item{
+    border-top:1px solid #d8d8d8;
+    .height(120);
+    .displayFlex();
+    position: relative;
+    .name{
+      .width(92);
+      .lineHeight(120);
+      color:#a5a5a5;
+      .fontSize(24);
+    }
+    .num{
+      .lineHeight(120);
+      .fontSize(32);
+      .unit{
+        .fontSize(20);
+        color:#a5a5a5
+      }
+    }
+    .text{
+      .lineHeight(120);
+      .fontSize(24);
+    }
+    .m-data-right{
+      position: absolute;
+      .width(300);
+      .right(0);
+      .top(40);
+      .m-data-chart-wrap{
+        position: absolute;
+        .right(0);
+        .top(0);
+        .width(300);
+        .height(10);
+        .borderRadius(10);
+        overflow: hidden;
+
+      }
+      .m-bg-blue{
+        background: #4fb4ff;
+      }
+      .m-bg-green{
+        background: #13ce66;
+      }
+      .m-bg-yellow{
+        background: #f7ba2a;
+      }
+      .m-bg-red{
+        background: #ff9494;
+      }
+      .m-ico-blue{
+        background-image:url("../../../static/images/device/publicDevice/icon-slide-blue.png")
+      }
+      .m-ico-green{
+        background-image:url("../../../static/images/device/publicDevice/icon-slide-green.png")
+      }
+      .m-ico-yellow{
+        background-image:url("../../../static/images/device/publicDevice/icon-slide-yellow.png")
+      }
+      .m-ico-red{
+        background-image:url("../../../static/images/device/publicDevice/icon-slide-red.png")
+      }
+      .m-ico{
+        .width(8);
+        .height(18);
+        background: #4fb4ff;
+        position: absolute;
+        .top(-6);
+        .borderWidth(3);
+        border-style:solid;
+        border-color:#fff;
+        overflow: hidden;
+        .borderRadius(6);
+      }
+      .m-data-text-wrap{
+        color:#a5a5a5;
+        position: absolute;
+        .top(18);
+        .right(0);
+        .width(300);
+        .fontSize(20);
+        text-align: center;
+      }
+    }
+
+  }
+}
