@@ -15,6 +15,8 @@ config = [
   devConfig,
 ].find((item) => item.hostname === webHostname)
 
+console.log('config', config);
+
 // 如果没有对应域名配置，则取本地配置
 if (!config) {
   config = localConfig
