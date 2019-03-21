@@ -349,6 +349,43 @@ export const request = async (options) => {
 
         console.log('lzSyncSleepAnalysisToServerResponse', lzSyncSleepAnalysisToServerResponse);
       }
+    } else if (options.url == 'bloodpressure_service/bp/get_bp_heRecords') {
+
+      //同步血压记录到服务端
+      if (response.data.data) {
+
+        let requesId = uuid.v4().replace(/-/g, '')
+
+        var md5omatic = require('md5-o-matic')
+        let signature = md5omatic("speed_" + requesId + "2")
+
+        let lzSyncBloodpressureToServerDataList = []
+        response.data.data.forEach(function (item) {
+          var _object = {}
+          Object.keys(item).forEach(function (key) {
+            if (key == 'created') {
+              _object[key] = new Date(item[key]).getTime()
+            } else {
+              _object[key] = item[key]
+            }
+          })
+          if (typeof item.deviceId === "undefined") {
+            _object.deviceId = 'add_by_man'
+          }
+          lzSyncBloodpressureToServerDataList.push(_object)
+        })
+
+        let lzSyncBloodpressureToServerResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/data-service/Bloodpressure/syncBloodpressureToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
+          'dataList': lzSyncBloodpressureToServerDataList
+        }, {
+            headers: {
+              'Content-Type': 'application/json'
+              , 'accessToken': lzAccessToken().access_token
+            }
+          })
+
+        console.log('lzSyncBloodpressureToServerResponse', lzSyncBloodpressureToServerResponse);
+      }
     }
 
     // toast成功信息
