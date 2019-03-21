@@ -386,6 +386,43 @@ export const request = async (options) => {
 
         console.log('lzSyncBloodpressureToServerResponse', lzSyncBloodpressureToServerResponse);
       }
+    } else if (options.url == 'bloodsugar_service/bs/health/get_history_Records') {
+
+      //同步血糖记录到服务端
+      if (response.data.data) {
+
+        let requesId = uuid.v4().replace(/-/g, '')
+
+        var md5omatic = require('md5-o-matic')
+        let signature = md5omatic("speed_" + requesId + "2")
+
+        let lzSyncBloodsugarToServerDataList = []
+        response.data.data.forEach(function (item) {
+          var _object = {}
+          Object.keys(item).forEach(function (key) {
+            if (key == 'created') {
+              _object[key] = new Date(item[key]).getTime()
+            } else {
+              _object[key] = item[key]
+            }
+          })
+          if (typeof item.deviceId === "undefined") {
+            _object.deviceId = 'add_by_man'
+          }
+          lzSyncBloodsugarToServerDataList.push(_object)
+        })
+
+        let lzSyncBloodsugarToServerResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/data-service/Bloodsugar/syncBloodsugarToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
+          'dataList': lzSyncBloodsugarToServerDataList
+        }, {
+            headers: {
+              'Content-Type': 'application/json'
+              , 'accessToken': lzAccessToken().access_token
+            }
+          })
+
+        console.log('lzSyncBloodsugarToServerResponse', lzSyncBloodsugarToServerResponse);
+      }
     }
 
     // toast成功信息
