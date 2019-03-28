@@ -21,7 +21,7 @@ function * watchInit() {
     yield call(getMyDevices)
     try{
       const deviceData = yield call(getDeviceById, deviceId)
-
+console.log('deviceData',deviceData);
       if(deviceData.experienceFlag && !deviceData.experienceTime){
         yield put(replace('organization/deviceStatus'))
 
