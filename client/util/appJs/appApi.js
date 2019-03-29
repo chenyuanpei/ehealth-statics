@@ -19,7 +19,7 @@ export const callWechatPay = (callback,appData)=>{
 }
 export const testCallback = (orderId,code)=>{
   if(code == 0){
-    let url = apiUrl + '/health_service/order/sample/sample_order_status?orderId='+orderId+'&appType=1&requestId=' + uuid.v4().replace(/-/g, '')
+    let url = apiUrl + '/health_service/order/sample/sample_order_status?orderId='+orderId+'&appType=23&requestId=' + uuid.v4().replace(/-/g, '')
     return axios.get(url).then(function (response) {
       const orderData = response['data']
       const {paymentStatus} = orderData['data']

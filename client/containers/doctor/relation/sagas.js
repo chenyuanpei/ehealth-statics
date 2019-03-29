@@ -149,7 +149,7 @@ function * watchShowSelectDialog() {
       options.getValues = async(values, index) => {
         if (index === 1) {
           let provinceId = values[0]
-            let url = apiUrl + '/supportplatform_service/area/getCitys/' + provinceId + '?appType=1&requestId=' + uuid.v4().replace(/-/g, '')
+            let url = apiUrl + '/supportplatform_service/area/getCitys/' + provinceId + '?appType=23&requestId=' + uuid.v4().replace(/-/g, '')
 
           return await axios.get(url).then(function (response) {
             const cityData = response['data']
