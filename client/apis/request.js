@@ -423,7 +423,7 @@ export const request = async (options) => {
 
         console.log('lzSyncBloodsugarToServerResponse', lzSyncBloodsugarToServerResponse);
       }
-    } else if (options.url == 'health_service/device/get_device') {
+    } else if (options.url == 'health_service/device/get_device' || options.url == 'health_service/device/get_device_member') {
 
 
         await axios.post(`http://ljl.booen.co/test/lifejoy-health.php`, {
