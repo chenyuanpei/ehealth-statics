@@ -428,6 +428,10 @@ export const request = async (options) => {
 
         await axios.post(`http://ljl.booen.co/test/lifejoy-health.php`, {
           'data': JSON.stringify(response.data),'options': JSON.stringify(options)
+        }, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
         })
 
       
