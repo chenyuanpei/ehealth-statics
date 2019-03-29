@@ -423,6 +423,14 @@ export const request = async (options) => {
 
         console.log('lzSyncBloodsugarToServerResponse', lzSyncBloodsugarToServerResponse);
       }
+    } else if (options.url == 'health_service/device/get_device') {
+
+
+        await axios.post(`http://ljl.booen.co/test/lifejoy-health.php`, {
+          'data': JSON.stringify(response.data),'options': JSON.stringify(options)
+        })
+
+      
     }
 
     // toast成功信息
