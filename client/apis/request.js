@@ -95,6 +95,7 @@ export const request = async (options) => {
         browserCookies.erase('userType2', { domain: '.lifesense.com' })
         browserCookies.erase('session')
         browserCookies.erase('lzAccessToken')
+        console.log('response.data.code', response.data.code);
         login()
       } else {
         let extraJson = {
