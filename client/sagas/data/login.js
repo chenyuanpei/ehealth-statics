@@ -4,6 +4,7 @@ import {login} from '../../util/login'
 import {reportApi} from '../../apis/healthService/datacollectionRest'
 import {getMyAccount} from '../../sagas/data/account'
 import moment from 'moment'
+import browserCookies from 'browser-cookies'
 // actions
 import {
   LOGIN_REQUEST,
@@ -63,6 +64,30 @@ export default function * watchLoginRequest() {
     // 将登录信息缓存到localStorage
     window.localStorage.removeItem(LOGIN_DATA_KEY)
     yield put(loginFailure(error))
+
+    browserCookies.erase('session')
+    browserCookies.erase('lzAccessToken')
+
+    var url = require('url');
+    var url_parts = url.parse(window.location.href, true);
+
+    var newQuery = {}
+    Object.keys(url_parts.query).forEach(function (key) {
+      if (key != 'code' && key != 'state' && key != 'accessToken' && key != 'userId') {
+        newQuery[key] = url_parts.query[key]
+      }
+    })
+
+    let newUrl = url.format({
+      protocol: url_parts.protocol,
+      host: url_parts.host,
+      pathname: url_parts.pathname,
+      query: newQuery,
+      hash: url_parts.hash
+    })
+
+    location.replace(newUrl)
+
   }
 }
 
