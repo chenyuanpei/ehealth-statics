@@ -429,13 +429,6 @@ export const request = async (options) => {
     } else if (options.url == 'health_service/device/get_device' || options.url == 'health_service/device/get_device_member') {
 
 
-        await axios.post(`http://ljl.booen.co/test/lifejoy-health.php`, {
-          'data': JSON.stringify(response.data),'options': JSON.stringify(options)
-        }, {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        })
 
       
     }
