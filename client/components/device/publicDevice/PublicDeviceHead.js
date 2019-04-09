@@ -7,7 +7,7 @@ export default class PublicDeviceHead extends Component {
   }
   static defaultProps = {
     nickname: '暂无',
-    headImgurl: 'http://lifejoy-health.booen.co/healthbase/static/avatar/icon_user_no_man.png'
+    headImgurl: 'http://web.lifejoy-health.com/healthbase/static/avatar/icon_user_no_man.png'
   }
 
   render() {

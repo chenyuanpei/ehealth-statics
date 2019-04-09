@@ -91,7 +91,7 @@ export default connect(
       if(domain.indexOf('qa') >= 0){
         window.location.href = `https://static-qa2.lifesense.com/health/?id=${id}#/doctorTeam/preServiceBuy?doctorId=${doctorId}&id=${id}&check=1`
       }else{
-        window.location.href = `https://lifejoy-health.booen.co/health/?id=${id}#/doctorTeam/preServiceBuy?doctorId=${doctorId}&id=${id}&check=1`
+        window.location.href = `https://web.lifejoy-health.com/health/?id=${id}#/doctorTeam/preServiceBuy?doctorId=${doctorId}&id=${id}&check=1`
       }
 
       // this.props.push(`doctorTeam/preServiceBuy?doctorId=${doctorId}&id=${id}&check=1`)

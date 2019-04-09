@@ -63,7 +63,7 @@ function shareMember(shortUrl, member) {
     onMenuShareAppMessage({
       title: '邀请关注',
       desc: `Hi，我向你分享了【${nickname || name}】成员的测量数据，点击这里接受吧！链接1小时内有效。`,
-      imgUrl: `https://lifejoy-health.booen.co/healthbase/static/health/common/img/logo_03.png`,
+      imgUrl: `https://web.lifejoy-health.com/healthbase/static/health/common/img/logo_03.png`,
       link: shortUrl,
       success:function(){
         console.log('已分享')

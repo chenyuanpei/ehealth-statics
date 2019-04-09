@@ -127,7 +127,7 @@ function shareOnline(id,memberId,deviceId,dataId,deviceType) {
   }
   // if(window.location.href.indexOf('cdn')>=0){
   //   appId = 'wxb8fd8c2cf1e6078e'
-  //   bridgeUrl = 'http://lifejoy-health.booen.co' + url
+  //   bridgeUrl = 'http://web.lifejoy-health.com' + url
   // }else{
   //   appId = 'wx503cebfd53ed7d2a'
   //   bridgeUrl = 'http://health-qa2.lifesense.com/health_service/dispatcher?protocol=https&path=' + encodeURIComponent(url)
@@ -142,7 +142,7 @@ function shareOnline(id,memberId,deviceId,dataId,deviceType) {
     onMenuShareAppMessage({
       title: `我刚完成一次免费${shareTitle}测量`,
       desc: `免费测量${shareTitle}，手机微信收取测量结果，专业医生提供针对性指导建议，快来体验吧！`,
-      imgUrl: 'http://lifejoy-health.booen.co/healthbase/static/health/common/img/logo_03.png',
+      imgUrl: 'http://web.lifejoy-health.com/healthbase/static/health/common/img/logo_03.png',
        success: function (res) {
            alert('已分享')
        },
@@ -155,7 +155,7 @@ function shareOnline(id,memberId,deviceId,dataId,deviceType) {
     })
     ShareTimeline({
         title: `我刚完成一次免费${shareTitle}测量`,
-        imgUrl: 'http://lifejoy-health.booen.co/healthbase/static/health/common/img/logo_03.png',
+        imgUrl: 'http://web.lifejoy-health.com/healthbase/static/health/common/img/logo_03.png',
         success:function(){
           console.log('已分享')
         }

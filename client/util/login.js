@@ -193,7 +193,7 @@ export function lxRelogin(appid, scope, appType, returnUrl, wechat_authorized_do
 
 export function getApiHost() {
   return {
-    'lifejoy-health.booen.co': 'health.lifesense.com'
+    'web.lifejoy-health.com': 'health.lifesense.com'
   }[location.hostname] || 'health.lifesense.com'
 }
 

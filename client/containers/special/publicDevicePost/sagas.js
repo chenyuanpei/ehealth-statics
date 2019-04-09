@@ -31,7 +31,7 @@ function * watchInit() {
     let appId = ''
     let bridgeUrl = ''
     if(window.location.href.indexOf('cdn')>=0){
-      bridgeUrl = 'https://lifejoy-health.booen.co' + url
+      bridgeUrl = 'https://web.lifejoy-health.com' + url
     }else{
       bridgeUrl = 'https://static-qa2.lifesense.com' + url
     }

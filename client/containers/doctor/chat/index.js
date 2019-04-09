@@ -70,7 +70,7 @@ export default connect(
       if(domain.indexOf('qa') >= 0){
         window.location.href = `https://static-qa2.lifesense.com/health/#/doctorTeam/studio?doctorId=${data.doctorId}&param=1`
       }else{
-        window.location.href = `https://lifejoy-health.booen.co/health/#/doctorTeam/studio?doctorId=${data.doctorId}&param=1`
+        window.location.href = `https://web.lifejoy-health.com/health/#/doctorTeam/studio?doctorId=${data.doctorId}&param=1`
       }
 
     })

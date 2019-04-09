@@ -32,7 +32,7 @@ function * watchInit() {
     let bridgeUrl = ''
     if(window.location.href.indexOf('cdn')>=0){
       // appId = 'wxb8fd8c2cf1e6078e'
-      bridgeUrl = 'https://lifejoy-health.booen.co' + url
+      bridgeUrl = 'https://web.lifejoy-health.com' + url
     }else{
       // appId = 'wx503cebfd53ed7d2a'
       bridgeUrl = 'https://static-qa2.lifesense.com' + url
