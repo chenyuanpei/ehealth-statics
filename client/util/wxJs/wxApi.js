@@ -54,6 +54,7 @@ export const onMenuShareAppMessage = (opts) => call((wx) => {
   //        alert(JSON.stringify(res))
   //    }
   // }
+  console.log('onMenuShareAppMessage',opts)
   wx.onMenuShareAppMessage(opts)
 })
 
