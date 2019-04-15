@@ -78,42 +78,42 @@ function shareMember(shortUrl, member) {
         console.log('乐众已分享')
       }
     })
-    // 显示右上角菜单
-    showOptionMenu()
-    // 隐藏所有非基本菜单项
-    hideAllNonBaseMenuItem()
-    // 批量隐藏菜单项
-    hideMenuItems({
-      menuList: [
-        'menuItem:share:timeline',
-        'menuItem:copyUrl',
-        'menuItem:originPage',
-        'menuItem:readMode',
-        'menuItem:openWithQQBrowser',
-        'menuItem:openWithSafari',
-        'menuItem:share:email',
-        'menuItem:exposeArticle',
-        'menuItem:setFont',
-        'menuItem:dayMode',
-        'menuItem:nightMode',
-        'menuItem:refresh',
-        'menuItem:profile',
-        'menuItem:addContact',
-        'menuItem:share:qq',
-        'menuItem:favorite',
-        'menuItem:share:facebook',
-        'menuItem:jsDebug',
-        'menuItem:editTag',
-        'menuItem:delete'
-      ],
-      // 要显示的菜单项，所有menu项见附录3
-      success: function () {
-        // 批量显示菜单项
-        showMenuItems({
-          menuList: ['menuItem:share:appMessage'], // 要显示的菜单项，所有menu项见附录3
-        })
-      }
-    })
+    // // 显示右上角菜单
+    // showOptionMenu()
+    // // 隐藏所有非基本菜单项
+    // hideAllNonBaseMenuItem()
+    // // 批量隐藏菜单项
+    // hideMenuItems({
+    //   menuList: [
+    //     'menuItem:share:timeline',
+    //     'menuItem:copyUrl',
+    //     'menuItem:originPage',
+    //     'menuItem:readMode',
+    //     'menuItem:openWithQQBrowser',
+    //     'menuItem:openWithSafari',
+    //     'menuItem:share:email',
+    //     'menuItem:exposeArticle',
+    //     'menuItem:setFont',
+    //     'menuItem:dayMode',
+    //     'menuItem:nightMode',
+    //     'menuItem:refresh',
+    //     'menuItem:profile',
+    //     'menuItem:addContact',
+    //     'menuItem:share:qq',
+    //     'menuItem:favorite',
+    //     'menuItem:share:facebook',
+    //     'menuItem:jsDebug',
+    //     'menuItem:editTag',
+    //     'menuItem:delete'
+    //   ],
+    //   // 要显示的菜单项，所有menu项见附录3
+    //   success: function () {
+    //     // 批量显示菜单项
+    //     showMenuItems({
+    //       menuList: ['menuItem:share:appMessage'], // 要显示的菜单项，所有menu项见附录3
+    //     })
+    //   }
+    // })
   })
 }
 
