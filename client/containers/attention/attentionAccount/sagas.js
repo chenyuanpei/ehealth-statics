@@ -64,7 +64,7 @@ function shareMember(shortUrl, member) {
       title: '邀请关注',
       desc: `Hi，我向你分享了【${nickname || name}】成员的测量数据，点击这里接受吧！链接1小时内有效。`,
       imgUrl: `https://web.lifejoy-health.com/healthbase/static/health/common/img/logo_03.png`,
-      link: shortUrl,
+      link: 'http://web.lifejoy-health.com/health/#/home',
       success:function(){
         console.log('乐众已分享')
       }
@@ -78,42 +78,42 @@ function shareMember(shortUrl, member) {
         console.log('乐众已分享')
       }
     })
-    // // 显示右上角菜单
+    // 显示右上角菜单
     showOptionMenu()
-    // // 隐藏所有非基本菜单项
-    // hideAllNonBaseMenuItem()
-    // // 批量隐藏菜单项
-    // hideMenuItems({
-    //   menuList: [
-    //     'menuItem:share:timeline',
-    //     'menuItem:copyUrl',
-    //     'menuItem:originPage',
-    //     'menuItem:readMode',
-    //     'menuItem:openWithQQBrowser',
-    //     'menuItem:openWithSafari',
-    //     'menuItem:share:email',
-    //     'menuItem:exposeArticle',
-    //     'menuItem:setFont',
-    //     'menuItem:dayMode',
-    //     'menuItem:nightMode',
-    //     'menuItem:refresh',
-    //     'menuItem:profile',
-    //     'menuItem:addContact',
-    //     'menuItem:share:qq',
-    //     'menuItem:favorite',
-    //     'menuItem:share:facebook',
-    //     'menuItem:jsDebug',
-    //     'menuItem:editTag',
-    //     'menuItem:delete'
-    //   ],
-    //   // 要显示的菜单项，所有menu项见附录3
-    //   success: function () {
-    //     // 批量显示菜单项
-    //     showMenuItems({
-    //       menuList: ['menuItem:share:appMessage'], // 要显示的菜单项，所有menu项见附录3
-    //     })
-    //   }
-    // })
+    // 隐藏所有非基本菜单项
+    hideAllNonBaseMenuItem()
+    // 批量隐藏菜单项
+    hideMenuItems({
+      menuList: [
+        'menuItem:share:timeline',
+        'menuItem:copyUrl',
+        'menuItem:originPage',
+        'menuItem:readMode',
+        'menuItem:openWithQQBrowser',
+        'menuItem:openWithSafari',
+        'menuItem:share:email',
+        'menuItem:exposeArticle',
+        'menuItem:setFont',
+        'menuItem:dayMode',
+        'menuItem:nightMode',
+        'menuItem:refresh',
+        'menuItem:profile',
+        'menuItem:addContact',
+        'menuItem:share:qq',
+        'menuItem:favorite',
+        'menuItem:share:facebook',
+        'menuItem:jsDebug',
+        'menuItem:editTag',
+        'menuItem:delete'
+      ],
+      // 要显示的菜单项，所有menu项见附录3
+      success: function () {
+        // 批量显示菜单项
+        showMenuItems({
+          menuList: ['menuItem:share:appMessage'], // 要显示的菜单项，所有menu项见附录3
+        })
+      }
+    })
   })
 }
 
