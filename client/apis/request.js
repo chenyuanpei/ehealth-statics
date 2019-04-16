@@ -274,6 +274,8 @@ export const request = async (options) => {
       //同步常规心率记录到心率服务
       if (response.data.data.heartRateAnalysisList) {
 
+        console.log('heartRateAnalysisList', response.data.data.heartRateAnalysisList);
+
         let requesId = uuid.v4().replace(/-/g, '')
 
         var md5omatic = require('md5-o-matic')
@@ -294,6 +296,8 @@ export const request = async (options) => {
           }
           lzSyncHeartRateToServerDataList.push(_object)
         })
+
+        console.log('lzSyncHeartRateToServerDataList', lzSyncHeartRateToServerDataList);
 
         let lzSyncHeartRateToServerResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/data-service/heartrate/syncHeartRateToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
           'dataList': lzSyncHeartRateToServerDataList
