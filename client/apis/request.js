@@ -200,6 +200,8 @@ export const request = async (options) => {
       //同步天步数记录到服务端
       if (response.data.data.pedometerRecordDayList) {
 
+        console.log('pedometerRecordDayList', response.data.data.pedometerRecordDayList);
+
         let requesId = uuid.v4().replace(/-/g, '')
 
         var md5omatic = require('md5-o-matic')
@@ -221,6 +223,8 @@ export const request = async (options) => {
           lzSyncPedometerRecordDayToServerDataList.push(_object)
         })
 
+        console.log('lzSyncPedometerRecordDayToServerDataList', lzSyncPedometerRecordDayToServerDataList);
+
         let lzSyncPedometerRecordDayToServerResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/data-service/sport/syncPedometerRecordDayToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
           'dataList': lzSyncPedometerRecordDayToServerDataList
         }, {
@@ -236,6 +240,8 @@ export const request = async (options) => {
 
       //同步小时步数记录到服务端
       if (response.data.data.pedometerRecordHourlyList) {
+
+        console.log('pedometerRecordHourlyList', response.data.data.pedometerRecordHourlyList);
 
         let requesId = uuid.v4().replace(/-/g, '')
 
@@ -257,6 +263,8 @@ export const request = async (options) => {
           }
           lzSyncPedometerRecordHourlyToServerDataList.push(_object)
         })
+
+        console.log('lzSyncPedometerRecordHourlyToServerDataList', lzSyncPedometerRecordHourlyToServerDataList);
 
         let lzSyncPedometerRecordHourlyToServerResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/data-service/sport/syncPedometerRecordHourlyToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
           'dataList': lzSyncPedometerRecordHourlyToServerDataList
