@@ -294,7 +294,13 @@ export const request = async (options) => {
           var _object = {}
           Object.keys(item).forEach(function (key) {
             if (key == 'measurementDate' || key == 'created') {
-              _object[key] = new Date(item[key]).getTime()
+              let s = item[key]
+              let d = new Date(s)
+              if(isNaN(d)){
+                s = s.split(/\D/);
+                d= new Date(s[0],s[1]-1,s[2],s[3],s[4],s[5]);
+              }
+              _object[key] = d.getTime()
               console.log('_time', key, item[key], _object[key]);
             } else {
               _object[key] = item[key]
