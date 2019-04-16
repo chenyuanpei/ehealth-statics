@@ -456,7 +456,7 @@ export const downloadImage = (success) => call((wx) => {
 // 8 界面操作接口
 // 8.1 隐藏右上角菜单
 export const hideOptionMenu = () => call((wx) => {
-  wx.hideOptionMenu()
+  //wx.hideOptionMenu()
 })
 // 8.2 显示右上角菜单
 export const showOptionMenu = () => call((wx) => {
@@ -477,7 +477,7 @@ export const hideMenuItems = (opts) => call((wx) => {
   //     alert(JSON.stringify(res))
   //   }
   // }
-  wx.hideMenuItems(opts)
+  //wx.hideMenuItems(opts)
 })
 
 // 8.4 批量显示菜单项
