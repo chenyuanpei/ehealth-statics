@@ -295,6 +295,7 @@ export const request = async (options) => {
           Object.keys(item).forEach(function (key) {
             if (key == 'measurementDate' || key == 'created') {
               _object[key] = new Date(item[key]).getTime()
+              console.log('_time', key, item[key], _object[key]);
             } else {
               _object[key] = item[key]
             }
