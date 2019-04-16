@@ -79,7 +79,7 @@ function shareMember(shortUrl, member) {
       }
     })
     // // 显示右上角菜单
-    // showOptionMenu()
+    showOptionMenu()
     // // 隐藏所有非基本菜单项
     // hideAllNonBaseMenuItem()
     // // 批量隐藏菜单项
