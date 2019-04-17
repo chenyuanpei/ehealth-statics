@@ -1,5 +1,5 @@
 export default {
-  hostname: 'static-dev.lifesense.com',
+  hostname: 'web.lifejoy-health.com',
   // devLoginInfo: {"userId": 4086430, "accessToken": "edf773ad10f246c98183ddaf2e640b4c", "expireAt": 1474101174750},
   apiUrl: '//health.lifesense.com',
   im: {
