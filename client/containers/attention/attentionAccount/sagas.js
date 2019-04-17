@@ -44,7 +44,7 @@ function * watchLoadData() {
       const qrcode = yield call(getQrcodeByMemberIdApi, {memberId})
       yield put(getQrcodeSuccess)
       const {id, nickname, name} = member
-      const publicUrlLink = encodeURI(`https://${rootRoute}/static/memberQrcode?qrcode=${qrcode}&name=${nickname || name}&id=${id}&account=${account.nickname}`)
+      const publicUrlLink = encodeURI(`http://${rootRoute}/static/memberQrcode?qrcode=${qrcode}&name=${nickname || name}&id=${id}&account=${account.nickname}`)
       const {shortUrl} = yield call(long2shortApi,{longUrl:publicUrlLink,app:'乐众健康',remark:'分享成员',ttl:6000})
       shareMember(shortUrl, member)
     } catch (e) {
