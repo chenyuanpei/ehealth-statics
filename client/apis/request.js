@@ -142,7 +142,7 @@ export const request = async (options) => {
       var md5omatic = require('md5-o-matic')
       let signature = md5omatic("speed_" + requesId + "2")
 
-      let lzCurrentUserResponse = await axios.get(`http://lz-qa.hiwarp.cn:80/api-gateway/user-service/user/current_user?requestId=${requesId}&appType=2&signature=${signature}`, {
+      let lzCurrentUserResponse = await axios.get(`http://app.lifejoy-health.com/api-gateway/user-service/user/current_user?requestId=${requesId}&appType=2&signature=${signature}`, {
         headers: {
           'Content-Type': 'application/json'
           , 'accessToken': lzAccessToken().access_token
@@ -192,7 +192,7 @@ export const request = async (options) => {
 
         console.log('lzSyncWeightRecordToServerResponse', lzSyncWeightRecordToServerDataList)
 
-        let lzSyncWeightRecordToServerResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/data-service/weight/syncWeightRecordToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
+        let lzSyncWeightRecordToServerResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/data-service/weight/syncWeightRecordToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
           'dataList': lzSyncWeightRecordToServerDataList
         }, {
             headers: {
@@ -241,7 +241,7 @@ export const request = async (options) => {
 
         console.log('lzSyncPedometerRecordDayToServerDataList', lzSyncPedometerRecordDayToServerDataList);
 
-        let lzSyncPedometerRecordDayToServerResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/data-service/sport/syncPedometerRecordDayToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
+        let lzSyncPedometerRecordDayToServerResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/data-service/sport/syncPedometerRecordDayToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
           'dataList': lzSyncPedometerRecordDayToServerDataList
         }, {
             headers: {
@@ -290,7 +290,7 @@ export const request = async (options) => {
 
         console.log('lzSyncPedometerRecordHourlyToServerDataList', lzSyncPedometerRecordHourlyToServerDataList);
 
-        let lzSyncPedometerRecordHourlyToServerResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/data-service/sport/syncPedometerRecordHourlyToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
+        let lzSyncPedometerRecordHourlyToServerResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/data-service/sport/syncPedometerRecordHourlyToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
           'dataList': lzSyncPedometerRecordHourlyToServerDataList
         }, {
             headers: {
@@ -338,7 +338,7 @@ export const request = async (options) => {
 
         console.log('lzSyncHeartRateToServerDataList', lzSyncHeartRateToServerDataList);
 
-        let lzSyncHeartRateToServerResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/data-service/heartrate/syncHeartRateToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
+        let lzSyncHeartRateToServerResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/data-service/heartrate/syncHeartRateToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
           'dataList': lzSyncHeartRateToServerDataList
         }, {
             headers: {
@@ -392,7 +392,7 @@ export const request = async (options) => {
           lzSyncSleepAnalysisToServerDataList.push(_object)
         })
 
-        let lzSyncSleepAnalysisToServerResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/data-service/sleep/syncSleepAnalysisToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
+        let lzSyncSleepAnalysisToServerResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/data-service/sleep/syncSleepAnalysisToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
           'dataList': lzSyncSleepAnalysisToServerDataList
         }, {
             headers: {
@@ -437,7 +437,7 @@ export const request = async (options) => {
           lzSyncBloodpressureToServerDataList.push(_object)
         })
 
-        let lzSyncBloodpressureToServerResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/data-service/Bloodpressure/syncBloodpressureToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
+        let lzSyncBloodpressureToServerResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/data-service/Bloodpressure/syncBloodpressureToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
           'dataList': lzSyncBloodpressureToServerDataList
         }, {
             headers: {
@@ -482,7 +482,7 @@ export const request = async (options) => {
           lzSyncBloodsugarToServerDataList.push(_object)
         })
 
-        let lzSyncBloodsugarToServerResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/data-service/Bloodsugar/syncBloodsugarToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
+        let lzSyncBloodsugarToServerResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/data-service/Bloodsugar/syncBloodsugarToServer?requestId=${requesId}&appType=2&signature=${signature}`, {
           'dataList': lzSyncBloodsugarToServerDataList
         }, {
             headers: {

@@ -111,7 +111,7 @@ export function lxCheckSession(appid, scope, appType, returnUrl, wechat_authoriz
 
         if ((!openid || !openid.openid)) {
 
-          let lzGetByCodeResponse = await axios.get(`http://lz-qa.hiwarp.cn:80/api-gateway/wechatgateway-service/get_by_code/${query.code}`)
+          let lzGetByCodeResponse = await axios.get(`http://app.lifejoy-health.com/api-gateway/wechatgateway-service/get_by_code/${query.code}`)
 
           console.log('lzGetByCodeResponse', lzGetByCodeResponse)
 
@@ -150,7 +150,7 @@ export function lxCheckSession(appid, scope, appType, returnUrl, wechat_authoriz
         var md5omatic = require('md5-o-matic')
         let signature = md5omatic("speed_" + requesId + "2")
 
-        let lzCheckUserResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/user-service/third_user_account/check_user?requestId=${requesId}&appType=2&signature=${signature}`, {
+        let lzCheckUserResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/user-service/third_user_account/check_user?requestId=${requesId}&appType=2&signature=${signature}`, {
           "openId": lzOpenid().openid,
           "userId": lxSession().loginId
         }, {

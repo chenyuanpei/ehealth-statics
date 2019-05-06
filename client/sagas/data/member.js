@@ -249,7 +249,7 @@ export function* saveMember(member) {
       var md5omatic = require('md5-o-matic')
       let signature = md5omatic("speed_" + requesId + "2")
 
-      let lzSaveUserResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/user-service/user/save_user?requestId=${requesId}&appType=2&signature=${signature}`, {
+      let lzSaveUserResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/user-service/user/save_user?requestId=${requesId}&appType=2&signature=${signature}`, {
         "idCard": member.idCard,
         "medicalCard": member.medicalCard,
         "age": member.age,

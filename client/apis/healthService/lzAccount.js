@@ -24,7 +24,7 @@ export const getAccountApi = async function () {
   var md5omatic = require('md5-o-matic')
   let signature = md5omatic("speed_" + requesId + "2")
 
-  let lzCurrentUserResponse = await axios.get(`http://lz-qa.hiwarp.cn:80/api-gateway/user-service/user/current_user?requestId=${requesId}&appType=2&signature=${signature}`, {
+  let lzCurrentUserResponse = await axios.get(`http://app.lifejoy-health.com/api-gateway/user-service/user/current_user?requestId=${requesId}&appType=2&signature=${signature}`, {
     headers: {
       'Content-Type': 'application/json'
       , 'accessToken': lzAccessToken().access_token
@@ -122,7 +122,7 @@ export const sendVerificationCodeApi = async function (inkey) {
   var md5omatic = require('md5-o-matic')
   let signature = md5omatic("speed_" + requesId + "2")
 
-  let lzSendCaptureResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/user-service/user_account/send_capture?requestId=${requesId}&appType=2&signature=${signature}`, {
+  let lzSendCaptureResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/user-service/user_account/send_capture?requestId=${requesId}&appType=2&signature=${signature}`, {
     "mobileOrEmail": inkey.mobile
   }, {
       headers: {
@@ -163,7 +163,7 @@ export const updateMobileApi = async function (inkey) {
   var md5omatic = require('md5-o-matic')
   let signature = md5omatic("speed_" + requesId + "2")
 
-  let lzBindMobileResponse = await axios.post(`http://lz-qa.hiwarp.cn:80/api-gateway/user-service/user_account/bind_mobile?requestId=${requesId}&appType=2&signature=${signature}`, {
+  let lzBindMobileResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/user-service/user_account/bind_mobile?requestId=${requesId}&appType=2&signature=${signature}`, {
     "captureCode": inkey.verificationCode
     , "mobile": inkey.mobile
   }, {
