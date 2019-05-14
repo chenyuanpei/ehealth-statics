@@ -141,6 +141,7 @@ function * watchSubmit() {
         toast('绑定成功', {icon: 'success'})
         // yield call(delay, 1000)
         // yield put(push('/center'))
+        console.log('goBack',goBack())
         yield put(goBack())
       } catch (error) {
         if (error.code === 440) {
