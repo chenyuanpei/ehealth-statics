@@ -140,7 +140,8 @@ function * watchSubmit() {
         yield call(updateAccountMobile, {mobile, verificationCode: code})
         toast('绑定成功', {icon: 'success'})
         // yield call(delay, 1000)
-        yield put(push('/center'))
+        // yield put(push('/center'))
+        window.history.back()
         console.log('goBack',goBack())
         yield put(goBack())
       } catch (error) {
