@@ -164,7 +164,7 @@ export function lxCheckSession(appid, scope, appType, returnUrl, wechat_authoriz
         if (lzCheckUserResponse.data.code == 200) {
           browserCookies.set('lzAccessToken', JSON.stringify(lzCheckUserResponse.data.data.accessToken), { expires: 30 })
           if (lzCheckUserResponse.data.data.bindMobile == false) {
-            var url = require('url');
+            // var url = require('url');
             var url_parts = url.parse(window.location.href, true);
             var query = url_parts.query;
             var newQuery = {}
