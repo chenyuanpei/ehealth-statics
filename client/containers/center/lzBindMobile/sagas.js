@@ -1,6 +1,7 @@
 import {push, goBack, replace} from 'react-router-redux'
 import {delay} from 'redux-saga'
 import {fork, take, put, call, select} from 'redux-saga/effects'
+import browserCookies from 'browser-cookies'
 
 // 发送验证码倒计时的localStorage的key
 const TIME_LOCAL_STORAGE_KEY = '___TIME_LOCAL_STORAGE_KEY'
@@ -141,7 +142,7 @@ function * watchSubmit() {
         toast('绑定成功', {icon: 'success'})
         // yield call(delay, 1000)
         // yield put(push('/center'))
-        window.history.back()
+        location.replace(browserCookies.get('_referer'))
         console.log('goBack',goBack())
         yield put(goBack())
       } catch (error) {

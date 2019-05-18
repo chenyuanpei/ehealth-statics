@@ -164,6 +164,7 @@ export function lxCheckSession(appid, scope, appType, returnUrl, wechat_authoriz
         if (lzCheckUserResponse.data.code == 200) {
           browserCookies.set('lzAccessToken', JSON.stringify(lzCheckUserResponse.data.data.accessToken), { expires: 30 })
           if (lzCheckUserResponse.data.data.bindMobile == false) {
+            browserCookies.set('_referer', window.location.href)
             location.replace('/health/#/center/lzBindMobile')
           }
         } else {
