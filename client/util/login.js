@@ -164,24 +164,6 @@ export function lxCheckSession(appid, scope, appType, returnUrl, wechat_authoriz
         if (lzCheckUserResponse.data.code == 200) {
           browserCookies.set('lzAccessToken', JSON.stringify(lzCheckUserResponse.data.data.accessToken), { expires: 30 })
           if (lzCheckUserResponse.data.data.bindMobile == false) {
-            // var url = require('url');
-            var url_parts = url.parse(window.location.href, true);
-            var query = url_parts.query;
-            var newQuery = {}
-            Object.keys(url_parts.query).forEach(function (key) {
-              if (key != 'code' && key != 'state' && key != 'accessToken' && key != 'userId') {
-                newQuery[key] = url_parts.query[key]
-              }
-            })
-            let newUrl = url.format({
-              protocol: url_parts.protocol,
-              host: url_parts.host,
-              pathname: url_parts.pathname,
-              query: newQuery,
-              hash: url_parts.hash
-            })
-            browserCookies.set('_referer', newUrl)
-
             location.replace('/health/#/center/lzBindMobile')
           }
         } else {
