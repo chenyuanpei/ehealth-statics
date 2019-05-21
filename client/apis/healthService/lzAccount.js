@@ -163,29 +163,31 @@ export const updateMobileApi = async function (inkey) {
   var md5omatic = require('md5-o-matic')
   let signature = md5omatic("speed_" + requestId + "2")
 
-  // let lzBindMobileResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/user-service/user_account/bind_mobile?requestId=${requestId}&appType=2&signature=${signature}`, {
-  //   "captureCode": inkey.verificationCode
-  //   , "mobile": inkey.mobile
-  // }, {
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //       , 'accessToken': lzAccessToken().access_token
-  //     }
-  //   })
+  let lzBindMobileResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/user-service/user_account/bind_mobile?requestId=${requestId}&appType=2&signature=${signature}`, {
+    "captureCode": inkey.verificationCode
+    , "mobile": inkey.mobile
+  }, {
+      headers: {
+        'Content-Type': 'application/json'
+        , 'accessToken': lzAccessToken().access_token
+      }
+    })
 
-  // console.log('lzBindMobileResponse', lzBindMobileResponse)
+  console.log('lzBindMobileResponse', lzBindMobileResponse)
 
-  let accessToken = session().accessToken
+  if (lzBindMobileResponse.data.code = 200) {
+    let accessToken = session().accessToken
 
-  let getAccountResponse = await axios.post(`http://health.lifesense.com/health_service/account/get_account?appType=23&requestId=${requestId}&accessToken=${accessToken}`, {}, {withCredentials: true})
+    let getAccountResponse = await axios.post(`http://health.lifesense.com/health_service/account/get_account?appType=23&requestId=${requestId}&accessToken=${accessToken}`, {}, { withCredentials: true })
 
-  console.log('getAccountResponse', getAccountResponse)
+    console.log('getAccountResponse', getAccountResponse)
 
-  let saveMemberData = getAccountResponse.data.data
-  saveMemberData.phone = inkey.mobile
-  let saveMemberResponse = await axios.post(`http://health.lifesense.com/health_service/account/save_member?action=1&deviceId=undefined&appType=23&requestId=${requestId}&accessToken=${accessToken}`, saveMemberData, {withCredentials: true})
+    let saveMemberData = getAccountResponse.data.data
+    saveMemberData.phone = inkey.mobile
+    let saveMemberResponse = await axios.post(`http://health.lifesense.com/health_service/account/save_member?action=1&deviceId=undefined&appType=23&requestId=${requestId}&accessToken=${accessToken}`, saveMemberData, { withCredentials: true })
 
-  console.log('saveMemberResponse', saveMemberResponse)
+    console.log('saveMemberResponse', saveMemberResponse)
+  }
 
 }
 
