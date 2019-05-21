@@ -177,15 +177,11 @@ export const updateMobileApi = async function (inkey) {
 
   let accessToken = session().accessToken
 
-  let getAccountResponse = await axios.post(`http://health.lifesense.com/health_service/account/get_account?appType=23&requestId=${requestId}&accessToken=${accessToken}`, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
+  let getAccountResponse = await axios.post(`http://health.lifesense.com/health_service/account/get_account?appType=23&requestId=${requestId}&accessToken=${accessToken}`)
 
   console.log('getAccountResponse', getAccountResponse)
 
-  
+
 
 }
 
