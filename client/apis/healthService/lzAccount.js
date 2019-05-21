@@ -181,7 +181,11 @@ export const updateMobileApi = async function (inkey) {
 
   console.log('getAccountResponse', getAccountResponse)
 
+  let saveMemberData = getAccountResponse.data.data
+  saveMemberData.phone = inkey.mobile
+  let saveMemberResponse = await axios.post(`http://health.lifesense.com/health_service/account/save_member?action=1&deviceId=undefined&appType=23&requestId=${requestId}&accessToken=${accessToken}`, saveMemberData, {withCredentials: true})
 
+  console.log('saveMemberResponse', saveMemberResponse)
 
 }
 
