@@ -158,22 +158,35 @@ export const checkCodeApi = request('check_verification_code', {
 
 export const updateMobileApi = async function (inkey) {
 
-  let requesId = uuid.v4().replace(/-/g, '')
+  let requestId = uuid.v4().replace(/-/g, '')
 
   var md5omatic = require('md5-o-matic')
-  let signature = md5omatic("speed_" + requesId + "2")
+  let signature = md5omatic("speed_" + requestId + "2")
 
-  let lzBindMobileResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/user-service/user_account/bind_mobile?requestId=${requesId}&appType=2&signature=${signature}`, {
-    "captureCode": inkey.verificationCode
-    , "mobile": inkey.mobile
-  }, {
+  // let lzBindMobileResponse = await axios.post(`http://app.lifejoy-health.com/api-gateway/user-service/user_account/bind_mobile?requestId=${requestId}&appType=2&signature=${signature}`, {
+  //   "captureCode": inkey.verificationCode
+  //   , "mobile": inkey.mobile
+  // }, {
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //       , 'accessToken': lzAccessToken().access_token
+  //     }
+  //   })
+
+  // console.log('lzBindMobileResponse', lzBindMobileResponse)
+
+  let accessToken = session().accessToken
+
+  let getAccountResponse = await axios.get(`http://health.lifesense.com/health_service/account/get_account?appType=23&requestId=${requestId}&accessToken=${accessToken}`, {
       headers: {
         'Content-Type': 'application/json'
-        , 'accessToken': lzAccessToken().access_token
       }
     })
 
-  console.log('lzBindMobileResponse', lzBindMobileResponse)
+  console.log('getAccountResponse', getAccountResponse)
+
+  
+
 }
 
 // 根据id删除成员
@@ -263,5 +276,10 @@ export const getStatPatient = request('get_stat_patient', { toast: false })
 
 export function lzAccessToken() {
   let str = decodeURIComponent(browserCookies.get('lzAccessToken'))
+  return str && str !== 'undefined' ? JSON.parse(str) : {}
+}
+
+export function session() {
+  let str = decodeURIComponent(browserCookies.get('session'))
   return str && str !== 'undefined' ? JSON.parse(str) : {}
 }
